@@ -1,0 +1,393 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+
+export const prerender = true;
+---
+
+<Layout
+  title="About Trinity Garden Assisted Living | Our Story & Mission"
+  description="Learn about Trinity Garden Assisted Living's commitment to providing exceptional, compassionate care for seniors in a warm, welcoming environment."
+>
+  <Header />
+
+  <Hero
+    title="Our Story"
+    description="Dedicated to enriching the lives of seniors through compassionate care and genuine community"
+    backgroundImage="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1920&q=80"
+    primaryCTA={{ text: "Schedule a Tour", href: "/contact" }}
+    secondaryCTA={{ text: "Our Services", href: "/services" }}
+  />
+
+  <main>
+    <!-- Mission Section -->
+    <section class="mission-section">
+      <div class="container">
+        <div class="mission-content">
+          <div class="mission-text">
+            <h2>Our Mission</h2>
+            <p class="lead">
+              At Trinity Garden Assisted Living, our mission is to provide exceptional care that honors the dignity, independence, and individuality of every resident.
+            </p>
+            <p>
+              We believe that every senior deserves to live their golden years with grace, comfort, and joy. Our dedicated team works tirelessly to create an environment where residents don't just receive care—they thrive in a vibrant community that feels like home.
+            </p>
+            <p>
+              Through personalized care plans, engaging activities, and a warm atmosphere, we empower our residents to maintain their independence while providing the support they need to live life to the fullest.
+            </p>
+          </div>
+          <div class="mission-image">
+            <img
+              src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=800&q=80"
+              alt="Trinity Garden care team with resident"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section section-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Our Core Values</h2>
+          <p class="section-description">
+            The principles that guide everything we do
+          </p>
+        </div>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">💝</div>
+            <h3>Compassion</h3>
+            <p>We treat every resident with kindness, empathy, and genuine care, as we would our own family members.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🤝</div>
+            <h3>Respect</h3>
+            <p>We honor each individual's dignity, preferences, and life experiences, ensuring they maintain autonomy and choice.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">⭐</div>
+            <h3>Excellence</h3>
+            <p>We strive for the highest standards in care, maintaining continuous training and improvement in all we do.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🏠</div>
+            <h3>Community</h3>
+            <p>We foster meaningful connections and relationships that combat loneliness and create a true sense of belonging.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🛡️</div>
+            <h3>Safety</h3>
+            <p>We provide a secure environment with 24/7 professional care, giving families peace of mind.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">✨</div>
+            <h3>Joy</h3>
+            <p>We celebrate life's moments, big and small, ensuring every day brings opportunities for happiness and fulfillment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+      <div class="container-narrow">
+        <div class="section-header text-center">
+          <h2>The Trinity Garden Story</h2>
+        </div>
+        <div class="story-content">
+          <p class="lead">
+            Trinity Garden Assisted Living was founded on a simple but profound belief: that every senior deserves to age with dignity, surrounded by compassion and genuine care.
+          </p>
+          <p>
+            Our journey began when our founders recognized a need for assisted living that truly felt like home—a place where residents are valued as individuals, not just patients. They envisioned a community where seniors could maintain their independence while receiving personalized support in a warm, welcoming environment.
+          </p>
+          <p>
+            Today, Trinity Garden stands as a testament to that vision. Our beautiful facility, combined with our dedicated team of caring professionals, creates an atmosphere where residents don't just live—they flourish. From our chef-prepared meals to our engaging activity programs, every detail is thoughtfully designed to enhance quality of life.
+          </p>
+          <p>
+            We're proud to have become a trusted partner for families seeking the best care for their loved ones. Our commitment to excellence, innovation in senior care, and unwavering dedication to our residents' wellbeing continues to guide us every day.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section section-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Our Dedicated Team</h2>
+          <p class="section-description">
+            Experienced, compassionate professionals committed to exceptional care
+          </p>
+        </div>
+        <div class="team-features">
+          <div class="team-feature">
+            <div class="feature-number">24/7</div>
+            <h3>Round-the-Clock Care</h3>
+            <p>Trained staff available at all times to ensure safety and provide assistance whenever needed.</p>
+          </div>
+          <div class="team-feature">
+            <div class="feature-number">RN</div>
+            <h3>Nurse-Led Care</h3>
+            <p>Registered nurses oversee all care plans and coordinate with healthcare providers for optimal outcomes.</p>
+          </div>
+          <div class="team-feature">
+            <div class="feature-number">100%</div>
+            <h3>Certified Staff</h3>
+            <p>All team members receive ongoing training in senior care, safety protocols, and emergency response.</p>
+          </div>
+        </div>
+        <div class="team-description">
+          <p>
+            Our team includes registered nurses, certified caregivers, activity coordinators, culinary professionals, and administrative staff—all dedicated to creating a supportive, enriching environment. We carefully select each team member not only for their professional qualifications but also for their genuine compassion and commitment to senior care.
+          </p>
+          <p>
+            Through continuous education and training, our staff stays current with best practices in assisted living, memory care, and person-centered care approaches. Most importantly, they build meaningful relationships with residents, getting to know their preferences, histories, and needs to provide truly personalized care.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Experience the Trinity Garden Difference</h2>
+          <p>
+            We invite you to visit our community and see firsthand how we're redefining assisted living. Schedule a personal tour and discover why families trust Trinity Garden for their loved ones' care.
+          </p>
+          <div class="cta-buttons">
+            <a href="/contact" class="btn btn-primary btn-large">Schedule a Tour</a>
+            <a href="/services" class="btn btn-light btn-large">View Our Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* Mission Section */
+  .mission-section {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .mission-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+  }
+
+  .mission-text h2 {
+    font-size: var(--font-size-2xl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .lead {
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .mission-image {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .mission-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Values Section */
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+  }
+
+  .value-card {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+  }
+
+  .value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .value-icon {
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .value-card h3 {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .value-card p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Story Section */
+  .story-section {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .story-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .story-content p {
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  /* Team Section */
+  .team-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .team-feature {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .feature-number {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-md);
+    line-height: 1;
+  }
+
+  .team-feature h3 {
+    font-size: var(--font-size-xl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .team-feature p {
+    color: var(--color-text-light);
+    margin: 0;
+  }
+
+  .team-description {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .team-description p {
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Section Headers */
+  .section-header {
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .section-header h2 {
+    font-size: var(--font-size-2xl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .section-description {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-light);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    font-size: var(--font-size-2xl);
+    color: var(--color-white);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .cta-content p {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xl);
+    opacity: 0.95;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .mission-content {
+      grid-template-columns: 1fr;
+    }
+
+    .mission-image {
+      order: -1;
+    }
+
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .team-features {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+    }
+
+    .cta-buttons .btn {
+      width: 100%;
+    }
+  }
+</style>

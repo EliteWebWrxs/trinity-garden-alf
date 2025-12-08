@@ -1,98 +1,358 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
 
 export const prerender = true;
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Chat"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout
+  title="Trinity Garden Assisted Living | Compassionate Senior Care"
+  description="Trinity Garden Assisted Living provides exceptional, personalized care for seniors in a warm, home-like environment. Schedule a tour today and discover the difference compassionate care makes."
+>
+  <Header />
+
+  <Hero
+    subtitle="Welcome to Trinity Garden"
+    title="Where Comfort Meets Compassionate Care"
+    description="A warm, home-like environment where seniors thrive with personalized attention, dignity, and respect."
+    primaryCTA={{ text: "Schedule a Tour", href: "/contact" }}
+    secondaryCTA={{ text: "Learn More", href: "/about" }}
+    backgroundImage="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1920&q=80"
+  />
+
+  <main>
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+      <div class="container">
+        <div class="welcome-content">
+          <div class="welcome-text">
+            <h2>A Place to Call Home</h2>
+            <p class="lead">
+              At Trinity Garden Assisted Living, we understand that choosing the right care for your loved one is one of life's most important decisions. Our mission is to provide a nurturing environment where seniors can maintain their independence while receiving the personalized support they need.
+            </p>
+            <p>
+              With our compassionate staff, beautiful surroundings, and commitment to excellence, we create more than just a facility—we create a vibrant community where every resident is treated like family.
+            </p>
+            <a href="/about" class="btn btn-primary">Discover Our Story</a>
+          </div>
+          <div class="welcome-image">
+            <img
+              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80"
+              alt="Happy senior residents at Trinity Garden"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section section-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Comprehensive Care Services</h2>
+          <p class="section-description">
+            Personalized care plans tailored to each resident's unique needs and preferences
+          </p>
+        </div>
+        <div class="grid grid-3">
+          <ServiceCard
+            title="Assisted Living"
+            description="24/7 support with daily activities while maintaining independence and dignity in a comfortable setting."
+            image="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=600&q=80"
+          />
+          <ServiceCard
+            title="Memory Care"
+            description="Specialized care for residents with Alzheimer's and dementia in a secure, engaging environment."
+            image="https://images.unsplash.com/photo-1581594549595-35f6edc7b762?w=600&q=80"
+          />
+          <ServiceCard
+            title="Personal Care"
+            description="Individualized assistance with bathing, dressing, medication management, and daily living activities."
+            image="https://images.unsplash.com/photo-1576765607924-3f7b8410a787?w=600&q=80"
+          />
+          <ServiceCard
+            title="Medication Management"
+            description="Professional oversight ensuring medications are taken correctly and on schedule for optimal health."
+            image="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80"
+          />
+          <ServiceCard
+            title="Nutritious Dining"
+            description="Chef-prepared, nutritious meals served in our elegant dining room, accommodating dietary needs."
+            image="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80"
+          />
+          <ServiceCard
+            title="Activities & Engagement"
+            description="Daily social, recreational, and wellness activities designed to enrich mind, body, and spirit."
+            image="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80"
+          />
+        </div>
+        <div class="section-cta text-center">
+          <a href="/services" class="btn btn-primary btn-large">View All Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="amenities-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Exceptional Amenities</h2>
+          <p class="section-description">
+            Every detail thoughtfully designed for comfort, safety, and enjoyment
+          </p>
+        </div>
+        <div class="amenities-grid">
+          <div class="amenity-item">
+            <span class="amenity-icon">🛏️</span>
+            <h3>Private Suites</h3>
+            <p>Spacious, comfortable rooms with private bathrooms</p>
+          </div>
+          <div class="amenity-item">
+            <span class="amenity-icon">🌳</span>
+            <h3>Beautiful Grounds</h3>
+            <p>Landscaped gardens and secure outdoor areas</p>
+          </div>
+          <div class="amenity-item">
+            <span class="amenity-icon">👨‍⚕️</span>
+            <h3>24/7 Care Staff</h3>
+            <p>Trained professionals available around the clock</p>
+          </div>
+          <div class="amenity-item">
+            <span class="amenity-icon">🍽️</span>
+            <h3>Gourmet Dining</h3>
+            <p>Restaurant-style dining with healthy, delicious options</p>
+          </div>
+          <div class="amenity-item">
+            <span class="amenity-icon">🎨</span>
+            <h3>Activity Programs</h3>
+            <p>Engaging daily activities and social events</p>
+          </div>
+          <div class="amenity-item">
+            <span class="amenity-icon">🏥</span>
+            <h3>Wellness Center</h3>
+            <p>On-site health services and fitness programs</p>
+          </div>
+          <div class="amenity-item">
+            <span class="amenity-icon">📚</span>
+            <h3>Library & Lounge</h3>
+            <p>Quiet spaces for reading and relaxation</p>
+          </div>
+          <div class="amenity-item">
+            <span class="amenity-icon">🚌</span>
+            <h3>Transportation</h3>
+            <p>Scheduled outings and medical appointments</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section section-alt">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>What Families Are Saying</h2>
+          <p class="section-description">
+            Hear from the families who trust us with their loved ones' care
+          </p>
+        </div>
+        <div class="grid grid-3">
+          <TestimonialCard
+            name="Sarah Johnson"
+            relation="Daughter of Resident"
+            text="Trinity Garden has been a blessing for our family. The staff treats my mother with such kindness and respect. We couldn't ask for better care."
+            rating={5}
+          />
+          <TestimonialCard
+            name="Michael Chen"
+            relation="Son of Resident"
+            text="The personalized attention my father receives is outstanding. The facility is beautiful, clean, and the activities keep him engaged and happy."
+            rating={5}
+          />
+          <TestimonialCard
+            name="Linda Martinez"
+            relation="Family Member"
+            text="From the first tour, we knew Trinity Garden was special. The compassionate staff and warm atmosphere make it feel like a true home, not a facility."
+            rating={5}
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Schedule Your Personal Tour Today</h2>
+          <p>
+            Experience the Trinity Garden difference firsthand. We'd love to show you around our beautiful community and answer any questions you may have.
+          </p>
+          <div class="cta-buttons">
+            <a href="/contact" class="btn btn-primary btn-large">Schedule a Tour</a>
+            <a href="tel:+1-XXX-XXX-XXXX" class="btn btn-light btn-large">Call Us Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
 </Layout>
 
 <style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
+  /* Welcome Section */
+  .welcome-section {
+    padding: var(--spacing-3xl) 0;
+  }
 
-	h1 {
-		margin: 2rem 0;
-	}
+  .welcome-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+  }
 
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
-	}
+  .welcome-text h2 {
+    font-size: var(--font-size-2xl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-lg);
+  }
 
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
+  .lead {
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+  }
 
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
+  .welcome-image {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+  }
 
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
+  .welcome-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
+  /* Section Headers */
+  .section-header {
+    margin-bottom: var(--spacing-2xl);
+  }
 
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+  .section-header h2 {
+    font-size: var(--font-size-2xl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .section-description {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-light);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .section-cta {
+    margin-top: var(--spacing-2xl);
+  }
+
+  /* Amenities Grid */
+  .amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .amenity-item {
+    text-align: center;
+    padding: var(--spacing-lg);
+    background-color: var(--color-cream);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+  }
+
+  .amenity-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .amenity-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .amenity-item h3 {
+    font-size: var(--font-size-lg);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .amenity-item p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+    margin: 0;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    font-size: var(--font-size-2xl);
+    color: var(--color-white);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .cta-content p {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xl);
+    opacity: 0.95;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .welcome-content {
+      grid-template-columns: 1fr;
+    }
+
+    .welcome-image {
+      order: -1;
+    }
+
+    .amenities-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+    }
+
+    .cta-buttons .btn {
+      width: 100%;
+    }
+  }
 </style>

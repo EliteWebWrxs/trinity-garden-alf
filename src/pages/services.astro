@@ -1,0 +1,450 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+
+export const prerender = true;
+---
+
+<Layout
+  title="Services | Trinity Garden Assisted Living"
+  description="Explore our comprehensive services including assisted living, memory care, personal care, medication management, and more. Personalized care plans tailored to each resident's unique needs."
+>
+  <Header />
+
+  <Hero
+    title="Our Services"
+    description="Comprehensive, personalized care designed to support every aspect of senior living"
+    backgroundImage="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1920&q=80"
+    primaryCTA={{ text: "Schedule a Tour", href: "/contact" }}
+    secondaryCTA={{ text: "Contact Us", href: "/contact" }}
+  />
+
+  <main>
+    <!-- Services Overview -->
+    <section class="services-overview">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Caring for Every Aspect of Senior Living</h2>
+          <p class="section-description">
+            At Trinity Garden, we provide a full spectrum of services designed to meet the unique needs of each resident while promoting independence, dignity, and quality of life.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assisted Living -->
+    <section class="service-detail" id="assisted-living">
+      <div class="container">
+        <div class="service-content">
+          <div class="service-image">
+            <img
+              src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=800&q=80"
+              alt="Assisted living care at Trinity Garden"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-text">
+            <h2>Assisted Living</h2>
+            <p class="lead">
+              Support when you need it, independence when you don't. Our assisted living services strike the perfect balance between personalized care and personal freedom.
+            </p>
+            <ul class="service-features">
+              <li>24/7 professional staff support</li>
+              <li>Assistance with daily activities (bathing, dressing, grooming)</li>
+              <li>Medication management and reminders</li>
+              <li>Housekeeping and laundry services</li>
+              <li>Transportation to appointments and outings</li>
+              <li>Personalized care plans reviewed regularly</li>
+              <li>Emergency call systems in every suite</li>
+              <li>Coordinated healthcare with physicians</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Memory Care -->
+    <section class="service-detail section-alt" id="memory-care">
+      <div class="container">
+        <div class="service-content reverse">
+          <div class="service-image">
+            <img
+              src="https://images.unsplash.com/photo-1581594549595-35f6edc7b762?w=800&q=80"
+              alt="Memory care services at Trinity Garden"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-text">
+            <h2>Memory Care</h2>
+            <p class="lead">
+              Specialized care for residents with Alzheimer's disease, dementia, and other memory impairments in a secure, nurturing environment.
+            </p>
+            <ul class="service-features">
+              <li>Secure, specially designed environment</li>
+              <li>Trained staff specializing in memory care</li>
+              <li>Cognitive stimulation activities and programs</li>
+              <li>Structured daily routines for comfort and familiarity</li>
+              <li>Memory-enhancing therapies and exercises</li>
+              <li>Family education and support groups</li>
+              <li>Person-centered care approach</li>
+              <li>Safe outdoor wandering areas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal Care -->
+    <section class="service-detail" id="personal-care">
+      <div class="container">
+        <div class="service-content">
+          <div class="service-image">
+            <img
+              src="https://images.unsplash.com/photo-1576765607924-3f7b8410a787?w=800&q=80"
+              alt="Personal care services"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-text">
+            <h2>Personal Care</h2>
+            <p class="lead">
+              Compassionate, dignified assistance with activities of daily living, tailored to each resident's individual needs and preferences.
+            </p>
+            <ul class="service-features">
+              <li>Bathing and personal hygiene assistance</li>
+              <li>Dressing and grooming support</li>
+              <li>Mobility and transfer assistance</li>
+              <li>Toileting and incontinence care</li>
+              <li>Eating assistance when needed</li>
+              <li>Respectful, gentle care approach</li>
+              <li>Maintaining dignity and independence</li>
+              <li>Flexible care adapted to changing needs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Medication Management -->
+    <section class="service-detail section-alt" id="medication-management">
+      <div class="container">
+        <div class="service-content reverse">
+          <div class="service-image">
+            <img
+              src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80"
+              alt="Medication management"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-text">
+            <h2>Medication Management</h2>
+            <p class="lead">
+              Professional oversight ensuring medications are taken correctly and on schedule for optimal health outcomes and peace of mind.
+            </p>
+            <ul class="service-features">
+              <li>Registered nurse oversight</li>
+              <li>Medication administration and monitoring</li>
+              <li>Prescription refill coordination</li>
+              <li>Drug interaction monitoring</li>
+              <li>Communication with physicians and pharmacies</li>
+              <li>Detailed medication tracking and records</li>
+              <li>Education for residents and families</li>
+              <li>Over-the-counter medication guidance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dining Services -->
+    <section class="service-detail" id="dining">
+      <div class="container">
+        <div class="service-content">
+          <div class="service-image">
+            <img
+              src="https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80"
+              alt="Dining services at Trinity Garden"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-text">
+            <h2>Nutritious Dining</h2>
+            <p class="lead">
+              Chef-prepared, restaurant-quality meals served in our elegant dining room, with attention to nutrition, taste, and dietary needs.
+            </p>
+            <ul class="service-features">
+              <li>Three meals daily plus snacks</li>
+              <li>Fresh, locally-sourced ingredients</li>
+              <li>Accommodations for dietary restrictions</li>
+              <li>Heart-healthy and diabetic-friendly options</li>
+              <li>Texture-modified meals when needed</li>
+              <li>Beautiful dining room atmosphere</li>
+              <li>Flexible dining times</li>
+              <li>Special occasion meals and celebrations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Activities & Engagement -->
+    <section class="service-detail section-alt" id="activities">
+      <div class="container">
+        <div class="service-content reverse">
+          <div class="service-image">
+            <img
+              src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80"
+              alt="Activities and engagement programs"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-text">
+            <h2>Activities & Engagement</h2>
+            <p class="lead">
+              A rich calendar of social, recreational, and wellness activities designed to enrich mind, body, and spirit while fostering community connections.
+            </p>
+            <ul class="service-features">
+              <li>Daily planned activities and events</li>
+              <li>Exercise and fitness programs</li>
+              <li>Arts, crafts, and creative expression</li>
+              <li>Music therapy and entertainment</li>
+              <li>Educational programs and lectures</li>
+              <li>Games, puzzles, and brain fitness</li>
+              <li>Gardening and nature activities</li>
+              <li>Community outings and field trips</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Respite Care -->
+    <section class="service-detail" id="respite-care">
+      <div class="container">
+        <div class="service-content">
+          <div class="service-image">
+            <img
+              src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=800&q=80"
+              alt="Respite care services"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-text">
+            <h2>Respite Care</h2>
+            <p class="lead">
+              Short-term stays providing family caregivers with a well-deserved break while ensuring their loved ones receive excellent care.
+            </p>
+            <ul class="service-features">
+              <li>Flexible stays from days to weeks</li>
+              <li>All assisted living services included</li>
+              <li>Trial experience for potential residents</li>
+              <li>Relief for family caregivers</li>
+              <li>Post-hospital recovery support</li>
+              <li>Seasonal or vacation care</li>
+              <li>Seamless transition process</li>
+              <li>Same high standards of care</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Healthcare Coordination -->
+    <section class="service-detail section-alt" id="healthcare">
+      <div class="container">
+        <div class="service-content reverse">
+          <div class="service-image">
+            <img
+              src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80"
+              alt="Healthcare coordination services"
+              loading="lazy"
+            />
+          </div>
+          <div class="service-text">
+            <h2>Healthcare Coordination</h2>
+            <p class="lead">
+              Comprehensive coordination of medical care, working closely with healthcare providers to ensure residents' health and wellness.
+            </p>
+            <ul class="service-features">
+              <li>On-site health assessments</li>
+              <li>Coordination with physicians and specialists</li>
+              <li>Transportation to medical appointments</li>
+              <li>Physical therapy arrangements</li>
+              <li>Hospice care coordination when needed</li>
+              <li>Health monitoring and vitals checks</li>
+              <li>Wound care and treatment management</li>
+              <li>Family health updates and communication</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Learn More About Our Services</h2>
+          <p>
+            Schedule a personal tour to see our services in action and discover how Trinity Garden can be the perfect home for your loved one.
+          </p>
+          <div class="cta-buttons">
+            <a href="/contact" class="btn btn-primary btn-large">Schedule a Tour</a>
+            <a href="tel:+1-XXX-XXX-XXXX" class="btn btn-light btn-large">Call Us Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* Services Overview */
+  .services-overview {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .section-header h2 {
+    font-size: var(--font-size-2xl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .section-description {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-light);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* Service Details */
+  .service-detail {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .service-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+  }
+
+  .service-content.reverse {
+    direction: rtl;
+  }
+
+  .service-content.reverse > * {
+    direction: ltr;
+  }
+
+  .service-image {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 400px;
+  }
+
+  .service-text h2 {
+    font-size: var(--font-size-2xl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .lead {
+    font-size: var(--font-size-lg);
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .service-features li {
+    padding: var(--spacing-sm) 0;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  .service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--color-white);
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    font-size: var(--font-size-2xl);
+    color: var(--color-white);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .cta-content p {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xl);
+    opacity: 0.95;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .service-content,
+    .service-content.reverse {
+      grid-template-columns: 1fr;
+      direction: ltr;
+    }
+
+    .service-image {
+      order: -1;
+    }
+
+    .service-image img {
+      min-height: 300px;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+    }
+
+    .cta-buttons .btn {
+      width: 100%;
+    }
+  }
+</style>

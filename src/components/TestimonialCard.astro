@@ -1,0 +1,78 @@
+---
+export interface Props {
+  name: string;
+  relation?: string;
+  text: string;
+  rating?: number;
+}
+
+const { name, relation, text, rating = 5 } = Astro.props;
+---
+
+<div class="testimonial-card">
+  <div class="testimonial-rating">
+    {Array.from({ length: rating }).map(() => (
+      <span class="star">★</span>
+    ))}
+  </div>
+  <p class="testimonial-text">"{text}"</p>
+  <div class="testimonial-author">
+    <strong>{name}</strong>
+    {relation && <span class="testimonial-relation">{relation}</span>}
+  </div>
+</div>
+
+<style>
+  .testimonial-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial-card:hover {
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-4px);
+  }
+
+  .testimonial-rating {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .star {
+    color: var(--color-accent);
+    font-size: 1.25rem;
+  }
+
+  .testimonial-text {
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    font-style: italic;
+    flex: 1;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .testimonial-author {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .testimonial-author strong {
+    color: var(--color-primary);
+    font-size: var(--font-size-lg);
+    font-family: var(--font-heading);
+  }
+
+  .testimonial-relation {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-light);
+  }
+</style>

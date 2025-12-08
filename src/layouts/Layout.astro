@@ -1,56 +1,95 @@
 ---
 export interface Props {
-	title: string;
+	title?: string;
+	description?: string;
+	image?: string;
+	canonical?: string;
 }
 
-const { title } = Astro.props as Props;
+const {
+	title = "Trinity Garden Assisted Living | Compassionate Senior Care",
+	description = "Trinity Garden Assisted Living provides exceptional, personalized care for seniors in a warm, home-like environment. Schedule a tour today and discover the difference compassionate care makes.",
+	image = "/images/trinity-garden-og.jpg",
+	canonical = Astro.url.pathname
+} = Astro.props;
+
+const siteUrl = "https://trinitygardenalf.com";
+const fullCanonical = `${siteUrl}${canonical}`;
+const fullImage = `${siteUrl}${image}`;
+
+// Schema.org structured data for SEO
+const organizationSchema = {
+	"@context": "https://schema.org",
+	"@type": "AssistedLivingFacility",
+	"name": "Trinity Garden Assisted Living",
+	"description": description,
+	"url": siteUrl,
+	"logo": `${siteUrl}/images/logo.png`,
+	"image": fullImage,
+	"telephone": "+1-XXX-XXX-XXXX",
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "123 Trinity Garden Lane",
+		"addressLocality": "Your City",
+		"addressRegion": "State",
+		"postalCode": "12345",
+		"addressCountry": "US"
+	},
+	"geo": {
+		"@type": "GeoCoordinates",
+		"latitude": "0.0000",
+		"longitude": "0.0000"
+	},
+	"openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 00:00-23:59",
+	"priceRange": "$$"
+};
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
+
+		<!-- Primary Meta Tags -->
 		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<link rel="canonical" href={fullCanonical} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={fullCanonical} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={fullImage} />
+		<meta property="og:site_name" content="Trinity Garden Assisted Living" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={fullCanonical} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={fullImage} />
+
+		<!-- Schema.org structured data -->
+		<script type="application/ld+json" is:inline set:html={JSON.stringify(organizationSchema)} />
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+
+		<!-- Global Styles -->
+		<link rel="stylesheet" href="/src/styles/global.css" />
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
-<style>
-	:root {
-		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
-		--font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
 
-		--color-text: hsl(12, 5%, 4%);
-		--color-bg: hsl(10, 21%, 95%);
-		--color-border: hsl(17, 24%, 90%);
-	}
-
-	html {
-		font-family: system-ui, sans-serif;
-		font-size: var(--font-size-base);
-		color: var(--color-text);
-		background-color: var(--color-bg);
-	}
-
-	body {
-		margin: 0;
-	}
-
-	:global(h1) {
-		font-size: var(--font-size-xl);
-	}
-
-	:global(h2) {
-		font-size: var(--font-size-lg);
-	}
-
-	:global(code) {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+<style is:global>
+	@import '../styles/global.css';
 </style>

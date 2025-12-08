@@ -1,0 +1,144 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  description?: string;
+  primaryCTA?: { text: string; href: string };
+  secondaryCTA?: { text: string; href: string };
+  backgroundImage?: string;
+  overlay?: boolean;
+}
+
+const {
+  title,
+  subtitle,
+  description,
+  primaryCTA = { text: "Schedule a Tour", href: "/contact" },
+  secondaryCTA = { text: "Learn More", href: "/about" },
+  backgroundImage = "/images/hero-home.jpg",
+  overlay = true
+} = Astro.props;
+---
+
+<section class="hero" style={`background-image: url(${backgroundImage})`}>
+  {overlay && <div class="hero-overlay"></div>}
+  <div class="container hero-content">
+    {subtitle && <p class="hero-subtitle">{subtitle}</p>}
+    <h1 class="hero-title">{title}</h1>
+    {description && <p class="hero-description">{description}</p>}
+    <div class="hero-cta">
+      {primaryCTA && (
+        <a href={primaryCTA.href} class="btn btn-primary btn-large">
+          {primaryCTA.text}
+        </a>
+      )}
+      {secondaryCTA && (
+        <a href={secondaryCTA.href} class="btn btn-light btn-large">
+          {secondaryCTA.text}
+        </a>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 80px;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(44, 40, 37, 0.7) 0%,
+      rgba(139, 111, 71, 0.6) 100%
+    );
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--color-white);
+    padding: var(--spacing-2xl) var(--container-padding);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-accent-light);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: var(--spacing-md);
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .hero-title {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.1;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+  }
+
+  .hero-description {
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto var(--spacing-xl);
+    color: var(--color-beige);
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease-out 0.6s backwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 70vh;
+    }
+
+    .hero-cta {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .hero-cta .btn {
+      width: 100%;
+    }
+  }
+</style>
