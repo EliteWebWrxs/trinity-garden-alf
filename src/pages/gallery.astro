@@ -122,8 +122,19 @@ const galleryImages = {
 ---
 
 <Layout
-  title="Gallery | Trinity Garden Assisted Living"
-  description="Take a virtual tour of Trinity Garden Assisted Living. View photos of our beautiful facility, private suites, common areas, dining rooms, and outdoor spaces."
+  title="Photo Gallery | Tour Trinity Garden Assisted Living Facility"
+  description="Take a virtual tour of Trinity Garden Assisted Living. View photos of our beautiful facility, private suites, common areas, elegant dining rooms, outdoor spaces, and activity programs. See where your loved one will call home."
+  keywords="assisted living photos, facility tour, senior living gallery, memory care facility, private suites, assisted living amenities, virtual tour"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Trinity Garden Assisted Living Photo Gallery",
+    "description": "Photos showcasing our beautiful facility, suites, amenities, and community",
+    "about": {
+      "@type": "AssistedLivingFacility",
+      "name": "Trinity Garden Assisted Living"
+    }
+  }}
 >
   <Header />
 
@@ -291,7 +302,7 @@ const galleryImages = {
           </p>
           <div class="cta-buttons">
             <a href="/contact" class="btn btn-primary btn-large">Schedule Your Tour</a>
-            <a href="tel:+1-XXX-XXX-XXXX" class="btn btn-light btn-large">Call Us Today</a>
+            <a href="tel:+1-813-467-9393" class="btn btn-light btn-large">Call (813) 467-9393</a>
           </div>
         </div>
       </div>

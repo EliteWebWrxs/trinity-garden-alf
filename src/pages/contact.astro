@@ -8,8 +8,29 @@ export const prerender = true;
 ---
 
 <Layout
-  title="Contact Us | Trinity Garden Assisted Living"
-  description="Get in touch with Trinity Garden Assisted Living. Schedule a tour, ask questions, or request information about our services. We're here to help you find the perfect care for your loved one."
+  title="Contact Trinity Garden Assisted Living Riverview FL | Schedule a Tour"
+  description="Contact Trinity Garden Assisted Living in Riverview, FL to schedule a personal tour, ask questions, or request information. Call (813) 467-9393 or fill out our form. We're here to help 24/7."
+  keywords="contact assisted living, schedule tour, senior care consultation, visit assisted living facility, assisted living information, elderly care contact"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Trinity Garden Assisted Living",
+    "description": "Get in touch to schedule a tour or ask questions about our services",
+    "mainEntity": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "telephone": "+1-813-467-9393",
+      "email": "info@trinitygardenalf.com",
+      "areaServed": "US",
+      "availableLanguage": ["English"],
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    }
+  }}
 >
   <Header />
 
@@ -17,7 +38,7 @@ export const prerender = true;
     title="Get in Touch"
     description="We're here to answer your questions and help you discover how Trinity Garden can be the perfect home for your loved one"
     backgroundImage="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1920&q=80"
-    primaryCTA={{ text: "Call Us Now", href: "tel:+1-XXX-XXX-XXXX" }}
+    primaryCTA={{ text: "Call (813) 467-9393", href: "tel:+1-813-467-9393" }}
   />
 
   <main>
@@ -28,7 +49,7 @@ export const prerender = true;
           <div class="contact-card">
             <div class="contact-icon">📞</div>
             <h3>Phone</h3>
-            <p><a href="tel:+1-XXX-XXX-XXXX">(XXX) XXX-XXXX</a></p>
+            <p><a href="tel:+1-813-467-9393">(813) 467-9393</a></p>
             <p class="contact-detail">Available 24/7 for emergencies</p>
           </div>
           <div class="contact-card">
@@ -40,7 +61,7 @@ export const prerender = true;
           <div class="contact-card">
             <div class="contact-icon">📍</div>
             <h3>Visit Us</h3>
-            <p>123 Trinity Garden Lane<br>Your City, State 12345</p>
+            <p>10522 Walker Vista Dr<br>Riverview, FL 33578</p>
             <p class="contact-detail">Tours available daily by appointment</p>
           </div>
         </div>
@@ -221,8 +242,8 @@ export const prerender = true;
             <div class="map-placeholder-content">
               <div class="map-icon">📍</div>
               <h3>Trinity Garden Assisted Living</h3>
-              <p>123 Trinity Garden Lane<br>Your City, State 12345</p>
-              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <p>10522 Walker Vista Dr<br>Riverview, FL 33578</p>
+              <a href="https://www.google.com/maps/dir//10522+Walker+Vista+Dr,+Riverview,+FL+33578" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                 Get Directions
               </a>
             </div>

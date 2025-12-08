@@ -8,8 +8,29 @@ export const prerender = true;
 ---
 
 <Layout
-  title="About Trinity Garden Assisted Living | Our Story & Mission"
-  description="Learn about Trinity Garden Assisted Living's commitment to providing exceptional, compassionate care for seniors in a warm, welcoming environment."
+  title="About Trinity Garden Assisted Living | Our Story, Mission & Values"
+  description="Learn about Trinity Garden Assisted Living's commitment to providing exceptional, compassionate care for seniors. Discover our story, mission, values, and dedicated team of caring professionals."
+  keywords="about Trinity Garden, senior care mission, assisted living values, compassionate care team, elderly care philosophy, senior living community"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Trinity Garden Assisted Living",
+    "description": "Learn about our mission, values, story, and dedicated team",
+    "mainEntity": {
+      "@type": "AssistedLivingFacility",
+      "name": "Trinity Garden Assisted Living",
+      "foundingDate": "2020",
+      "description": "Trinity Garden was founded on a belief that every senior deserves to age with dignity, surrounded by compassion and genuine care.",
+      "knowsAbout": [
+        "Assisted Living",
+        "Memory Care",
+        "Senior Care",
+        "Elderly Care",
+        "Dementia Care"
+      ],
+      "award": "Excellence in Senior Care"
+    }
+  }}
 >
   <Header />
 

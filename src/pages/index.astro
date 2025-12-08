@@ -10,8 +10,67 @@ export const prerender = true;
 ---
 
 <Layout
-  title="Trinity Garden Assisted Living | Compassionate Senior Care"
-  description="Trinity Garden Assisted Living provides exceptional, personalized care for seniors in a warm, home-like environment. Schedule a tour today and discover the difference compassionate care makes."
+  title="Trinity Garden Assisted Living Riverview FL | Compassionate Senior Care"
+  description="Trinity Garden Assisted Living in Riverview, FL provides exceptional, personalized care for seniors in a warm, home-like environment. 24/7 professional care, memory care, activities, and more. Call (813) 467-9393."
+  keywords="assisted living Riverview FL, senior care Riverview, memory care Tampa, elderly care Florida, retirement community Riverview, nursing home alternative Tampa Bay, assisted living facility Riverview"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Home",
+    "description": "Trinity Garden Assisted Living home page featuring our compassionate senior care services",
+    "mainEntity": {
+      "@type": "Service",
+      "serviceType": "Assisted Living",
+      "provider": {
+        "@type": "AssistedLivingFacility",
+        "name": "Trinity Garden Assisted Living"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Riverview"
+        },
+        {
+          "@type": "City",
+          "name": "Tampa"
+        },
+        {
+          "@type": "City",
+          "name": "Brandon"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Assisted Living Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Assisted Living",
+              "description": "24/7 support with daily activities while maintaining independence"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Memory Care",
+              "description": "Specialized care for residents with Alzheimer's and dementia"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Personal Care",
+              "description": "Individualized assistance with daily living activities"
+            }
+          }
+        ]
+      }
+    }
+  }}
 >
   <Header />
 
@@ -193,7 +252,7 @@ export const prerender = true;
           </p>
           <div class="cta-buttons">
             <a href="/contact" class="btn btn-primary btn-large">Schedule a Tour</a>
-            <a href="tel:+1-XXX-XXX-XXXX" class="btn btn-light btn-large">Call Us Now</a>
+            <a href="tel:+1-813-467-9393" class="btn btn-light btn-large">Call (813) 467-9393</a>
           </div>
         </div>
       </div>
