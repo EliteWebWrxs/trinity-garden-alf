@@ -3,8 +3,8 @@ export interface Props {
   title: string;
   subtitle?: string;
   description?: string;
-  primaryCTA?: { text: string; href: string };
-  secondaryCTA?: { text: string; href: string };
+  primaryCTA?: { text: string; href: string; class?: string };
+  secondaryCTA?: { text: string; href: string; class?: string };
   backgroundImage?: string;
   overlay?: boolean;
 }
@@ -16,27 +16,34 @@ const {
   primaryCTA = { text: "Schedule a Tour", href: "/contact" },
   secondaryCTA = { text: "Learn More", href: "/about" },
   backgroundImage = "/images/hero-home.jpg",
-  overlay = true
+  overlay = true,
 } = Astro.props;
 ---
 
 <section class="hero" style={`background-image: url(${backgroundImage})`}>
-  {overlay && <div class="hero-overlay"></div>}
+  {overlay && <div class="hero-overlay" />}
   <div class="container hero-content">
     {subtitle && <p class="hero-subtitle">{subtitle}</p>}
     <h1 class="hero-title">{title}</h1>
     {description && <p class="hero-description">{description}</p>}
     <div class="hero-cta">
-      {primaryCTA && (
-        <a href={primaryCTA.href} class="btn btn-primary btn-large">
-          {primaryCTA.text}
-        </a>
-      )}
-      {secondaryCTA && (
-        <a href={secondaryCTA.href} class="btn btn-light btn-large">
-          {secondaryCTA.text}
-        </a>
-      )}
+      {
+        primaryCTA && (
+          <a href={primaryCTA.href} class={`btn ${"btn-primary"} btn-large`}>
+            {primaryCTA.text}
+          </a>
+        )
+      }
+      {
+        secondaryCTA && (
+          <a
+            href={secondaryCTA.href}
+            class={`btn ${secondaryCTA.class || "btn-light"} btn-large`}
+          >
+            {secondaryCTA.text}
+          </a>
+        )
+      }
     </div>
   </div>
 </section>

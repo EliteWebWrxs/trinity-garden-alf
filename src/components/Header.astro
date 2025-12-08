@@ -5,8 +5,7 @@ const currentPath = Astro.url.pathname;
 <header class="header">
   <nav class="nav container">
     <a href="/" class="logo">
-      <span class="logo-text">Trinity Garden</span>
-      <span class="logo-subtitle">Assisted Living</span>
+      <img src="/logo.png" alt="Trinity Garden Assisted Living" class="logo-image" />
     </a>
 
     <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
@@ -87,7 +86,7 @@ const currentPath = Astro.url.pathname;
 
   .logo {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     text-decoration: none;
     transition: transform var(--transition-base);
   }
@@ -96,21 +95,10 @@ const currentPath = Astro.url.pathname;
     transform: scale(1.02);
   }
 
-  .logo-text {
-    font-family: var(--font-heading);
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    line-height: 1;
-  }
-
-  .logo-subtitle {
-    font-family: var(--font-primary);
-    font-size: 0.75rem;
-    color: var(--color-text-secondary);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-top: 0.25rem;
+  .logo-image {
+    height: 50px;
+    width: auto;
+    display: block;
   }
 
   .nav-toggle {

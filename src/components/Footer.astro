@@ -8,8 +8,7 @@ const currentYear = new Date().getFullYear();
       <div class="footer-grid">
         <div class="footer-col">
           <div class="footer-logo">
-            <span class="logo-text">Trinity Garden</span>
-            <span class="logo-subtitle">Assisted Living</span>
+            <img src="/logo.png" alt="Trinity Garden Assisted Living" class="footer-logo-image" />
           </div>
           <p class="footer-description">
             Providing compassionate, personalized care in a warm, home-like environment where seniors thrive.
@@ -89,27 +88,14 @@ const currentYear = new Date().getFullYear();
   }
 
   .footer-logo {
-    display: flex;
-    flex-direction: column;
     margin-bottom: var(--spacing-md);
   }
 
-  .footer-logo .logo-text {
-    font-family: var(--font-heading);
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--color-accent);
-    line-height: 1;
-  }
-
-  .footer-logo .logo-subtitle {
-    font-family: var(--font-primary);
-    font-size: 0.75rem;
-    color: var(--color-text-on-dark);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-top: 0.25rem;
-    opacity: 0.8;
+  .footer-logo-image {
+    height: 80px;
+    width: auto;
+    display: block;
+    filter: brightness(0) invert(1);
   }
 
   .footer-description {
