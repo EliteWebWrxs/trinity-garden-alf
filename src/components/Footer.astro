@@ -8,10 +8,15 @@ const currentYear = new Date().getFullYear();
       <div class="footer-grid">
         <div class="footer-col">
           <div class="footer-logo">
-            <img src="/logo.png" alt="Trinity Garden Assisted Living" class="footer-logo-image" />
+            <img
+              src="/logo.png"
+              alt="Trinity Garden Assisted Living"
+              class="footer-logo-image"
+            />
           </div>
           <p class="footer-description">
-            Providing compassionate, personalized care in a warm, home-like environment where seniors thrive.
+            Providing compassionate, personalized care in a warm, home-like
+            environment where seniors thrive.
           </p>
         </div>
 
@@ -30,7 +35,7 @@ const currentYear = new Date().getFullYear();
           <h4 class="footer-title">Services</h4>
           <ul class="footer-links">
             <li><a href="/services#assisted-living">Assisted Living</a></li>
-            <li><a href="/services#memory-care">Memory Care</a></li>
+            <li><a href="/services#adult-daycare">Adult Daycare</a></li>
             <li><a href="/services#respite-care">Respite Care</a></li>
             <li><a href="/services#personal-care">Personal Care</a></li>
           </ul>
@@ -45,7 +50,9 @@ const currentYear = new Date().getFullYear();
             </li>
             <li>
               <strong>Email:</strong><br />
-              <a href="mailto:info@trinitygardenalf.com">info@trinitygardenalf.com</a>
+              <a href="mailto:admin@trinitygardenalf.com"
+                >admin@trinitygardenalf.com</a
+              >
             </li>
             <li>
               <strong>Address:</strong><br />
@@ -61,7 +68,9 @@ const currentYear = new Date().getFullYear();
   <div class="footer-bottom">
     <div class="container">
       <div class="footer-bottom-content">
-        <p>&copy; {currentYear} Trinity Garden Assisted Living. All rights reserved.</p>
+        <p>
+          &copy; {currentYear} Trinity Garden Assisted Living. All rights reserved.
+        </p>
         <div class="footer-bottom-links">
           <a href="/privacy">Privacy Policy</a>
           <a href="/terms">Terms of Service</a>
@@ -73,8 +82,8 @@ const currentYear = new Date().getFullYear();
 
 <style>
   .footer {
-    background-color: var(--color-black);
-    color: var(--color-text-on-dark);
+    background-color: var(--color-cream);
+    color: var(--color-text);
   }
 
   .footer-top {
@@ -95,12 +104,10 @@ const currentYear = new Date().getFullYear();
     height: 80px;
     width: auto;
     display: block;
-    filter: brightness(0) invert(1);
   }
 
   .footer-description {
-    color: var(--color-text-on-dark);
-    opacity: 0.8;
+    color: var(--color-text-secondary);
     line-height: 1.6;
   }
 
@@ -125,15 +132,13 @@ const currentYear = new Date().getFullYear();
 
   .footer-links a,
   .footer-contact a {
-    color: var(--color-text-on-dark);
+    color: var(--color-text-secondary);
     text-decoration: none;
-    opacity: 0.8;
     transition: all var(--transition-base);
   }
 
   .footer-links a:hover,
   .footer-contact a:hover {
-    opacity: 1;
     color: var(--color-accent);
     padding-left: 5px;
   }
@@ -148,7 +153,7 @@ const currentYear = new Date().getFullYear();
   }
 
   .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding: var(--spacing-lg) 0;
   }
 
@@ -162,7 +167,7 @@ const currentYear = new Date().getFullYear();
 
   .footer-bottom p {
     margin: 0;
-    opacity: 0.6;
+    color: var(--color-text-light);
     font-size: var(--font-size-sm);
   }
 
@@ -172,15 +177,14 @@ const currentYear = new Date().getFullYear();
   }
 
   .footer-bottom-links a {
-    color: var(--color-text-on-dark);
+    color: var(--color-text-light);
     text-decoration: none;
-    opacity: 0.6;
     font-size: var(--font-size-sm);
-    transition: opacity var(--transition-base);
+    transition: color var(--transition-base);
   }
 
   .footer-bottom-links a:hover {
-    opacity: 1;
+    color: var(--color-primary);
   }
 
   /* Mobile Styles */
