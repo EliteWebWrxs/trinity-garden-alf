@@ -1,8 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Hero from '../components/Hero.astro';
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import serviceHero from "../assets/service-hero.webp";
+import personalCare from "../assets/personal-care.webp";
+import respiteCare from "../assets/respite-care.webp";
+import memoryCare from "../assets/memory-care.webp";
+import artsCrafts from "../assets/arts-crafts.webp";
 
 export const prerender = true;
 ---
@@ -14,62 +20,67 @@ export const prerender = true;
   schema={{
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Senior Care Services",
-    "description": "Comprehensive care services offered at Trinity Garden Assisted Living",
-    "itemListElement": [
+    name: "Senior Care Services",
+    description:
+      "Comprehensive care services offered at Trinity Garden Assisted Living",
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "item": {
+        position: 1,
+        item: {
           "@type": "Service",
-          "name": "Assisted Living",
-          "description": "24/7 professional staff support with daily activities while maintaining independence",
-          "provider": {
+          name: "Assisted Living",
+          description:
+            "24/7 professional staff support with daily activities while maintaining independence",
+          provider: {
             "@type": "AssistedLivingFacility",
-            "name": "Trinity Garden Assisted Living"
-          }
-        }
+            name: "Trinity Garden Assisted Living",
+          },
+        },
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "item": {
+        position: 2,
+        item: {
           "@type": "Service",
-          "name": "Memory Care",
-          "description": "Specialized care for residents with Alzheimer's disease and dementia",
-          "provider": {
+          name: "Memory Care",
+          description:
+            "Specialized care for residents with Alzheimer's disease and dementia",
+          provider: {
             "@type": "AssistedLivingFacility",
-            "name": "Trinity Garden Assisted Living"
-          }
-        }
+            name: "Trinity Garden Assisted Living",
+          },
+        },
       },
       {
         "@type": "ListItem",
-        "position": 3,
-        "item": {
+        position: 3,
+        item: {
           "@type": "Service",
-          "name": "Personal Care",
-          "description": "Compassionate assistance with activities of daily living",
-          "provider": {
+          name: "Personal Care",
+          description:
+            "Compassionate assistance with activities of daily living",
+          provider: {
             "@type": "AssistedLivingFacility",
-            "name": "Trinity Garden Assisted Living"
-          }
-        }
+            name: "Trinity Garden Assisted Living",
+          },
+        },
       },
       {
         "@type": "ListItem",
-        "position": 4,
-        "item": {
+        position: 4,
+        item: {
           "@type": "Service",
-          "name": "Medication Management",
-          "description": "Professional oversight ensuring medications are taken correctly",
-          "provider": {
+          name: "Medication Management",
+          description:
+            "Professional oversight ensuring medications are taken correctly",
+          provider: {
             "@type": "AssistedLivingFacility",
-            "name": "Trinity Garden Assisted Living"
-          }
-        }
-      }
-    ]
+            name: "Trinity Garden Assisted Living",
+          },
+        },
+      },
+    ],
   }}
 >
   <Header />
@@ -77,8 +88,12 @@ export const prerender = true;
   <Hero
     title="Our Services"
     description="Comprehensive, personalized care designed to support every aspect of senior living"
-    backgroundImage="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1920&q=80"
-    primaryCTA={{ text: "Schedule a Tour", href: "/contact", class: "btn-green" }}
+    backgroundImage={serviceHero.src}
+    primaryCTA={{
+      text: "Schedule a Tour",
+      href: "/contact",
+      class: "btn-green",
+    }}
     secondaryCTA={{ text: "Contact Us", href: "/contact", class: "btn-light" }}
   />
 
@@ -89,7 +104,9 @@ export const prerender = true;
         <div class="section-header text-center">
           <h2>Caring for Every Aspect of Senior Living</h2>
           <p class="section-description">
-            At Trinity Garden, we provide a full spectrum of services designed to meet the unique needs of each resident while promoting independence, dignity, and quality of life.
+            At Trinity Garden, we provide a full spectrum of services designed
+            to meet the unique needs of each resident while promoting
+            independence, dignity, and quality of life.
           </p>
         </div>
       </div>
@@ -109,11 +126,15 @@ export const prerender = true;
           <div class="service-text">
             <h2>Assisted Living</h2>
             <p class="lead">
-              Support when you need it, independence when you don't. Our assisted living services strike the perfect balance between personalized care and personal freedom.
+              Support when you need it, independence when you don't. Our
+              assisted living services strike the perfect balance between
+              personalized care and personal freedom.
             </p>
             <ul class="service-features">
               <li>24/7 professional staff support</li>
-              <li>Assistance with daily activities (bathing, dressing, grooming)</li>
+              <li>
+                Assistance with daily activities (bathing, dressing, grooming)
+              </li>
               <li>Medication management and reminders</li>
               <li>Housekeeping and laundry services</li>
               <li>Transportation to appointments and outings</li>
@@ -131,16 +152,20 @@ export const prerender = true;
       <div class="container">
         <div class="service-content reverse">
           <div class="service-image">
-            <img
-              src="https://images.unsplash.com/photo-1581594549595-35f6edc7b762?w=800&q=80"
+            <Image
+              src={memoryCare}
               alt="Memory care services at Trinity Garden"
               loading="lazy"
+              width={800}
+              height={600}
+              quality={80}
             />
           </div>
           <div class="service-text">
             <h2>Memory Care</h2>
             <p class="lead">
-              Specialized care for residents with Alzheimer's disease, dementia, and other memory impairments in a secure, nurturing environment.
+              Specialized care for residents with Alzheimer's disease, dementia,
+              and other memory impairments in a secure, nurturing environment.
             </p>
             <ul class="service-features">
               <li>Secure, specially designed environment</li>
@@ -162,16 +187,21 @@ export const prerender = true;
       <div class="container">
         <div class="service-content">
           <div class="service-image">
-            <img
-              src="https://images.unsplash.com/photo-1576765607924-3f7b8410a787?w=800&q=80"
+            <Image
+              src={personalCare}
               alt="Personal care services"
               loading="lazy"
+              width={800}
+              height={600}
+              quality={80}
             />
           </div>
           <div class="service-text">
             <h2>Personal Care</h2>
             <p class="lead">
-              Compassionate, dignified assistance with activities of daily living, tailored to each resident's individual needs and preferences.
+              Compassionate, dignified assistance with activities of daily
+              living, tailored to each resident's individual needs and
+              preferences.
             </p>
             <ul class="service-features">
               <li>Bathing and personal hygiene assistance</li>
@@ -202,7 +232,8 @@ export const prerender = true;
           <div class="service-text">
             <h2>Medication Management</h2>
             <p class="lead">
-              Professional oversight ensuring medications are taken correctly and on schedule for optimal health outcomes and peace of mind.
+              Professional oversight ensuring medications are taken correctly
+              and on schedule for optimal health outcomes and peace of mind.
             </p>
             <ul class="service-features">
               <li>Registered nurse oversight</li>
@@ -233,7 +264,9 @@ export const prerender = true;
           <div class="service-text">
             <h2>Nutritious Dining</h2>
             <p class="lead">
-              Chef-prepared, restaurant-quality meals served in our elegant dining room, with attention to nutrition, taste, and dietary needs.
+              Chef-prepared, restaurant-quality meals served in our elegant
+              dining room, with attention to nutrition, taste, and dietary
+              needs.
             </p>
             <ul class="service-features">
               <li>Three meals daily plus snacks</li>
@@ -256,7 +289,7 @@ export const prerender = true;
         <div class="service-content reverse">
           <div class="service-image">
             <img
-              src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80"
+              src={artsCrafts.src}
               alt="Activities and engagement programs"
               loading="lazy"
             />
@@ -264,7 +297,9 @@ export const prerender = true;
           <div class="service-text">
             <h2>Activities & Engagement</h2>
             <p class="lead">
-              A rich calendar of social, recreational, and wellness activities designed to enrich mind, body, and spirit while fostering community connections.
+              A rich calendar of social, recreational, and wellness activities
+              designed to enrich mind, body, and spirit while fostering
+              community connections.
             </p>
             <ul class="service-features">
               <li>Daily planned activities and events</li>
@@ -286,16 +321,20 @@ export const prerender = true;
       <div class="container">
         <div class="service-content">
           <div class="service-image">
-            <img
-              src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=800&q=80"
+            <Image
+              src={respiteCare}
               alt="Respite care services"
               loading="lazy"
+              width={800}
+              height={600}
+              quality={80}
             />
           </div>
           <div class="service-text">
             <h2>Respite Care</h2>
             <p class="lead">
-              Short-term stays providing family caregivers with a well-deserved break while ensuring their loved ones receive excellent care.
+              Short-term stays providing family caregivers with a well-deserved
+              break while ensuring their loved ones receive excellent care.
             </p>
             <ul class="service-features">
               <li>Flexible stays from days to weeks</li>
@@ -326,7 +365,8 @@ export const prerender = true;
           <div class="service-text">
             <h2>Healthcare Coordination</h2>
             <p class="lead">
-              Comprehensive coordination of medical care, working closely with healthcare providers to ensure residents' health and wellness.
+              Comprehensive coordination of medical care, working closely with
+              healthcare providers to ensure residents' health and wellness.
             </p>
             <ul class="service-features">
               <li>On-site health assessments</li>
@@ -349,11 +389,16 @@ export const prerender = true;
         <div class="cta-content">
           <h2>Learn More About Our Services</h2>
           <p>
-            Schedule a personal tour to see our services in action and discover how Trinity Garden can be the perfect home for your loved one.
+            Schedule a personal tour to see our services in action and discover
+            how Trinity Garden can be the perfect home for your loved one.
           </p>
           <div class="cta-buttons">
-            <a href="/contact" class="btn btn-green btn-large">Schedule a Tour</a>
-            <a href="tel:+1-813-467-9393" class="btn btn-light btn-large">Call (813) 467-9393</a>
+            <a href="/contact" class="btn btn-green btn-large"
+              >Schedule a Tour</a
+            >
+            <a href="tel:+1-813-467-9393" class="btn btn-light btn-large"
+              >Call (813) 467-9393</a
+            >
           </div>
         </div>
       </div>
@@ -444,7 +489,7 @@ export const prerender = true;
   }
 
   .service-features li::before {
-    content: '✓';
+    content: "✓";
     position: absolute;
     left: 0;
     color: var(--color-secondary);
@@ -454,7 +499,11 @@ export const prerender = true;
 
   /* CTA Section */
   .cta-section {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    background: linear-gradient(
+      135deg,
+      var(--color-primary) 0%,
+      var(--color-primary-dark) 100%
+    );
     color: var(--color-white);
     padding: var(--spacing-3xl) 0;
   }

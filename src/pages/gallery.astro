@@ -1,8 +1,42 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Hero from '../components/Hero.astro';
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+
+// Import gallery hero
+import galleryHero from "../assets/Gallery-hero.webp";
+
+// Import community images
+import communitySpace1 from "../assets/community-space-1.webp";
+import communitySpace2 from "../assets/community-space-2.webp";
+import communitySpace3 from "../assets/community-space-3.webp";
+import communitySpace4 from "../assets/community-space-4.webp";
+
+// Import suite images
+import privateSuite1 from "../assets/private-suite-1.webp";
+import privateSuite2 from "../assets/private-suite-2.webp";
+import privateSuite3 from "../assets/private-suite-3.webp";
+import privateSuite4 from "../assets/private suite-4.webp";
+
+// Import dining images
+import dining1 from "../assets/dinning-1.webp";
+import dining2 from "../assets/dinning-2.webp";
+import dining3 from "../assets/dinning-3.webp";
+import dining4 from "../assets/dinning-4.webp";
+
+// Import outdoor images
+import outdoor1 from "../assets/outdoor-1.webp";
+import outdoor2 from "../assets/outdoor-2.jpg";
+import outdoor3 from "../assets/outdoor-3.webp";
+import outdoor5 from "../assets/outdoor-5.webp";
+
+// Import room details images
+import doubleRoom1 from "../assets/double-room-1.webp";
+import doubleRoom2 from "../assets/double-room-2.webp";
+import bathroom1 from "../assets/bathroom-1.webp";
+import bathroom2 from "../assets/bathroom-2.webp";
 
 export const prerender = true;
 
@@ -10,114 +44,114 @@ export const prerender = true;
 const galleryImages = {
   community: [
     {
-      src: "https://images.unsplash.com/photo-1576765607924-3f7b8410a787?w=800&q=80",
+      src: communitySpace1,
       alt: "Common area at Trinity Garden",
-      caption: "Welcoming Common Areas"
+      caption: "Welcoming Common Areas",
     },
     {
-      src: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80",
+      src: communitySpace2,
       alt: "Residents enjoying activities",
-      caption: "Engaging Community Life"
+      caption: "Engaging Community Life",
     },
     {
-      src: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=800&q=80",
+      src: communitySpace3,
       alt: "Beautiful lobby area",
-      caption: "Elegant Lobby & Reception"
+      caption: "Elegant Lobby & Reception",
     },
     {
-      src: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&q=80",
+      src: communitySpace4,
       alt: "Activity room",
-      caption: "Activity & Recreation Room"
-    }
+      caption: "Activity & Recreation Room",
+    },
   ],
   suites: [
     {
-      src: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&q=80",
+      src: privateSuite1,
       alt: "Private resident suite",
-      caption: "Spacious Private Suites"
+      caption: "Spacious Private Suites",
     },
     {
-      src: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80",
+      src: privateSuite2,
       alt: "Bedroom with comfortable furnishings",
-      caption: "Comfortable Living Spaces"
+      caption: "Comfortable Living Spaces",
     },
     {
-      src: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80",
+      src: privateSuite3,
       alt: "Bathroom with safety features",
-      caption: "Modern, Accessible Bathrooms"
+      caption: "Modern, Accessible Bathrooms",
     },
     {
-      src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
+      src: privateSuite4,
       alt: "Suite sitting area",
-      caption: "Private Sitting Areas"
-    }
+      caption: "Private Sitting Areas",
+    },
   ],
   dining: [
     {
-      src: "https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80",
+      src: dining1,
       alt: "Dining room",
-      caption: "Restaurant-Style Dining"
+      caption: "Restaurant-Style Dining",
     },
     {
-      src: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&q=80",
+      src: dining2,
       alt: "Chef-prepared meal",
-      caption: "Nutritious, Delicious Meals"
+      caption: "Nutritious, Delicious Meals",
     },
     {
-      src: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80",
+      src: dining3,
       alt: "Dining area with residents",
-      caption: "Social Dining Experience"
+      caption: "Social Dining Experience",
     },
     {
-      src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
+      src: dining4,
       alt: "Breakfast spread",
-      caption: "Fresh, Quality Ingredients"
-    }
+      caption: "Fresh, Quality Ingredients",
+    },
   ],
   outdoor: [
     {
-      src: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80",
+      src: outdoor1,
       alt: "Garden walkway",
-      caption: "Beautiful Landscaped Gardens"
+      caption: "Beautiful Landscaped Gardens",
     },
     {
-      src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+      src: outdoor2,
       alt: "Outdoor seating area",
-      caption: "Relaxing Outdoor Spaces"
+      caption: "Relaxing Outdoor Spaces",
     },
     {
-      src: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80",
+      src: outdoor3,
       alt: "Garden path",
-      caption: "Secure Walking Paths"
+      caption: "Secure Walking Paths",
     },
     {
-      src: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80",
+      src: outdoor5,
       alt: "Courtyard",
-      caption: "Peaceful Courtyards"
-    }
+      caption: "Peaceful Courtyards",
+    },
   ],
-  activities: [
+  roomDetails: [
     {
-      src: "https://images.unsplash.com/photo-1581594549595-35f6edc7b762?w=800&q=80",
-      alt: "Arts and crafts activity",
-      caption: "Creative Arts Programs"
+      src: doubleRoom1,
+      alt: "Double occupancy room at Trinity Garden",
+      caption: "Double Room",
     },
     {
-      src: "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=800&q=80",
-      alt: "Exercise class",
-      caption: "Fitness & Wellness Activities"
+      src: doubleRoom2,
+      alt: "Spacious double room",
+      caption: "Double Room",
     },
     {
-      src: "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=800&q=80",
-      alt: "Music therapy session",
-      caption: "Music & Entertainment"
+      src: bathroom1,
+      alt: "Accessible bathroom",
+      caption: "Bathroom",
     },
     {
-      src: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80",
-      alt: "Group activity",
-      caption: "Social Events & Gatherings"
-    }
-  ]
+      src: bathroom2,
+      alt: "Modern bathroom with safety features",
+      caption: "Bathroom",
+    },
+  ],
 };
 ---
 
@@ -128,12 +162,13 @@ const galleryImages = {
   schema={{
     "@context": "https://schema.org",
     "@type": "ImageGallery",
-    "name": "Trinity Garden Assisted Living Photo Gallery",
-    "description": "Photos showcasing our beautiful facility, suites, amenities, and community",
-    "about": {
+    name: "Trinity Garden Assisted Living Photo Gallery",
+    description:
+      "Photos showcasing our beautiful facility, suites, amenities, and community",
+    about: {
       "@type": "AssistedLivingFacility",
-      "name": "Trinity Garden Assisted Living"
-    }
+      name: "Trinity Garden Assisted Living",
+    },
   }}
 >
   <Header />
@@ -141,8 +176,12 @@ const galleryImages = {
   <Hero
     title="Tour Our Community"
     description="Experience the warmth and beauty of Trinity Garden through our photo gallery"
-    backgroundImage="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1920&q=80"
-    primaryCTA={{ text: "Schedule a Visit", href: "/contact", class: "btn-green" }}
+    backgroundImage={galleryHero.src}
+    primaryCTA={{
+      text: "Schedule a Visit",
+      href: "/contact",
+      class: "btn-green",
+    }}
     secondaryCTA={{ text: "Contact Us", href: "/contact", class: "btn-light" }}
   />
 
@@ -153,10 +192,15 @@ const galleryImages = {
         <div class="text-center">
           <h2>Welcome to Trinity Garden</h2>
           <p class="lead">
-            Pictures speak louder than words. Browse our gallery to see the warm, inviting atmosphere that makes Trinity Garden feel like home. From our elegant common areas to private suites and beautiful outdoor spaces, every detail has been thoughtfully designed for comfort and safety.
+            Pictures speak louder than words. Browse our gallery to see the
+            warm, inviting atmosphere that makes Trinity Garden feel like home.
+            From our elegant common areas to private suites and beautiful
+            outdoor spaces, every detail has been thoughtfully designed for
+            comfort and safety.
           </p>
           <p class="cta-text">
-            We invite you to schedule a personal tour to experience our community in person and meet our wonderful staff and residents.
+            We invite you to schedule a personal tour to experience our
+            community in person and meet our wonderful staff and residents.
           </p>
         </div>
       </div>
@@ -168,22 +212,25 @@ const galleryImages = {
         <div class="section-header text-center">
           <h2>Community Spaces</h2>
           <p class="section-description">
-            Elegant, comfortable gathering areas designed to foster connection and community
+            Elegant, comfortable gathering areas designed to foster connection
+            and community
           </p>
         </div>
-        <div class="gallery-grid">
-          {galleryImages.community.map((image) => (
-            <div class="gallery-item">
-              <img
-                src={image.src}
-                alt={image.alt}
-                loading="lazy"
-              />
-              <div class="gallery-caption">
-                <p>{image.caption}</p>
+        <div class="gallery-grid gallery-grid-2">
+          {
+            galleryImages.community.map((image) => (
+              <div class="gallery-item">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                  quality={80}
+                />
               </div>
-            </div>
-          ))}
+            ))
+          }
         </div>
       </div>
     </section>
@@ -194,28 +241,59 @@ const galleryImages = {
         <div class="section-header text-center">
           <h2>Private Suites</h2>
           <p class="section-description">
-            Spacious, comfortable accommodations with modern amenities and safety features
+            Spacious, comfortable accommodations with modern amenities and
+            safety features
           </p>
         </div>
-        <div class="gallery-grid">
-          {galleryImages.suites.map((image) => (
-            <div class="gallery-item">
-              <img
-                src={image.src}
-                alt={image.alt}
-                loading="lazy"
-              />
-              <div class="gallery-caption">
-                <p>{image.caption}</p>
+        <div class="gallery-grid gallery-grid-2">
+          {
+            galleryImages.suites.map((image) => (
+              <div class="gallery-item">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                  quality={80}
+                />
               </div>
-            </div>
-          ))}
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Room Details -->
+    <section class="gallery-section" id="room-details">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Room Details</h2>
+          <p class="section-description">
+            Double rooms and accessible bathrooms designed for comfort and safety
+          </p>
+        </div>
+        <div class="gallery-grid gallery-grid-2">
+          {
+            galleryImages.roomDetails.map((image) => (
+              <div class="gallery-item">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                  quality={80}
+                />
+              </div>
+            ))
+          }
         </div>
       </div>
     </section>
 
     <!-- Dining -->
-    <section class="gallery-section" id="dining">
+    <section class="gallery-section section-alt" id="dining">
       <div class="container">
         <div class="section-header text-center">
           <h2>Dining Experience</h2>
@@ -223,19 +301,21 @@ const galleryImages = {
             Restaurant-quality meals in a warm, social atmosphere
           </p>
         </div>
-        <div class="gallery-grid">
-          {galleryImages.dining.map((image) => (
-            <div class="gallery-item">
-              <img
-                src={image.src}
-                alt={image.alt}
-                loading="lazy"
-              />
-              <div class="gallery-caption">
-                <p>{image.caption}</p>
+        <div class="gallery-grid gallery-grid-2">
+          {
+            galleryImages.dining.map((image) => (
+              <div class="gallery-item">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                  quality={80}
+                />
               </div>
-            </div>
-          ))}
+            ))
+          }
         </div>
       </div>
     </section>
@@ -246,48 +326,25 @@ const galleryImages = {
         <div class="section-header text-center">
           <h2>Outdoor Spaces</h2>
           <p class="section-description">
-            Beautiful landscaping and secure outdoor areas for relaxation and enjoyment
+            Beautiful landscaping and secure outdoor areas for relaxation and
+            enjoyment
           </p>
         </div>
-        <div class="gallery-grid">
-          {galleryImages.outdoor.map((image) => (
-            <div class="gallery-item">
-              <img
-                src={image.src}
-                alt={image.alt}
-                loading="lazy"
-              />
-              <div class="gallery-caption">
-                <p>{image.caption}</p>
+        <div class="gallery-grid gallery-grid-2">
+          {
+            galleryImages.outdoor.map((image) => (
+              <div class="gallery-item">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                  quality={80}
+                />
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Activities -->
-    <section class="gallery-section" id="activities">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2>Activities & Engagement</h2>
-          <p class="section-description">
-            Enriching programs that promote wellness, creativity, and connection
-          </p>
-        </div>
-        <div class="gallery-grid">
-          {galleryImages.activities.map((image) => (
-            <div class="gallery-item">
-              <img
-                src={image.src}
-                alt={image.alt}
-                loading="lazy"
-              />
-              <div class="gallery-caption">
-                <p>{image.caption}</p>
-              </div>
-            </div>
-          ))}
+            ))
+          }
         </div>
       </div>
     </section>
@@ -298,11 +355,17 @@ const galleryImages = {
         <div class="cta-content">
           <h2>See Trinity Garden in Person</h2>
           <p>
-            Photos can only tell part of the story. We invite you to schedule a personal tour to experience the warmth, care, and community that make Trinity Garden special.
+            Photos can only tell part of the story. We invite you to schedule a
+            personal tour to experience the warmth, care, and community that
+            make Trinity Garden special.
           </p>
           <div class="cta-buttons">
-            <a href="/contact" class="btn btn-green btn-large">Schedule Your Tour</a>
-            <a href="tel:+1-813-467-9393" class="btn btn-light btn-large">Call (813) 467-9393</a>
+            <a href="/contact" class="btn btn-green btn-large"
+              >Schedule Your Tour</a
+            >
+            <a href="tel:+1-813-467-9393" class="btn btn-light btn-large"
+              >Call (813) 467-9393</a
+            >
           </div>
         </div>
       </div>
@@ -366,6 +429,10 @@ const galleryImages = {
     gap: var(--spacing-lg);
   }
 
+  .gallery-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .gallery-item {
     position: relative;
     overflow: hidden;
@@ -416,7 +483,11 @@ const galleryImages = {
 
   /* CTA Section */
   .cta-section {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    background: linear-gradient(
+      135deg,
+      var(--color-primary) 0%,
+      var(--color-primary-dark) 100%
+    );
     color: var(--color-white);
     padding: var(--spacing-3xl) 0;
   }
@@ -453,7 +524,7 @@ const galleryImages = {
     }
 
     .gallery-item img {
-      height: 250px;
+      height: 350px;
     }
 
     .gallery-caption {

@@ -1,10 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Hero from '../components/Hero.astro';
-import ServiceCard from '../components/ServiceCard.astro';
-import TestimonialCard from '../components/TestimonialCard.astro';
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import TestimonialCard from "../components/TestimonialCard.astro";
+import heroHeader from "../assets/HeroHeader.webp";
+import livingRoom from "../assets/living-room.webp";
+import personalCare from "../assets/personal-care.webp";
+import respiteCare from "../assets/respite-care.webp";
+import memoryCare from "../assets/memory-care.webp";
+import artsCrafts from "../assets/arts-crafts.webp";
 
 export const prerender = true;
 ---
@@ -16,60 +23,64 @@ export const prerender = true;
   schema={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Home",
-    "description": "Trinity Garden Assisted Living home page featuring our compassionate senior care services",
-    "mainEntity": {
+    name: "Home",
+    description:
+      "Trinity Garden Assisted Living home page featuring our compassionate senior care services",
+    mainEntity: {
       "@type": "Service",
-      "serviceType": "Assisted Living",
-      "provider": {
+      serviceType: "Assisted Living",
+      provider: {
         "@type": "AssistedLivingFacility",
-        "name": "Trinity Garden Assisted Living"
+        name: "Trinity Garden Assisted Living",
       },
-      "areaServed": [
+      areaServed: [
         {
           "@type": "City",
-          "name": "Riverview"
+          name: "Riverview",
         },
         {
           "@type": "City",
-          "name": "Tampa"
+          name: "Tampa",
         },
         {
           "@type": "City",
-          "name": "Brandon"
-        }
+          name: "Brandon",
+        },
       ],
-      "hasOfferCatalog": {
+      hasOfferCatalog: {
         "@type": "OfferCatalog",
-        "name": "Assisted Living Services",
-        "itemListElement": [
+        name: "Assisted Living Services",
+        itemListElement: [
           {
             "@type": "Offer",
-            "itemOffered": {
+            itemOffered: {
               "@type": "Service",
-              "name": "Assisted Living",
-              "description": "24/7 support with daily activities while maintaining independence"
-            }
+              name: "Assisted Living",
+              description:
+                "24/7 support with daily activities while maintaining independence",
+            },
           },
           {
             "@type": "Offer",
-            "itemOffered": {
+            itemOffered: {
               "@type": "Service",
-              "name": "Memory Care",
-              "description": "Specialized care for residents with Alzheimer's and dementia"
-            }
+              name: "Memory Care",
+              description:
+                "Specialized care for residents with Alzheimer's and dementia",
+            },
           },
           {
             "@type": "Offer",
-            "itemOffered": {
+            itemOffered: {
               "@type": "Service",
-              "name": "Personal Care",
-              "description": "Individualized assistance with daily living activities"
-            }
-          }
-        ]
-      }
-    }
+              name: "Personal Care",
+              description:
+                "Individualized assistance with daily living activities",
+            },
+          },
+        ],
+      },
+    },
   }}
 >
   <Header />
@@ -78,9 +89,13 @@ export const prerender = true;
     subtitle="Welcome to Trinity Garden"
     title="Where Comfort Meets Compassionate Care"
     description="A warm, home-like environment where seniors thrive with personalized attention, dignity, and respect."
-    primaryCTA={{ text: "Schedule a Tour", href: "/contact", class: "btn-green" }}
+    primaryCTA={{
+      text: "Schedule a Tour",
+      href: "/contact",
+      class: "btn-green",
+    }}
     secondaryCTA={{ text: "Learn More", href: "/about", class: "btn-light" }}
-    backgroundImage="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1920&q=80"
+    backgroundImage={heroHeader.src}
   />
 
   <main>
@@ -91,18 +106,28 @@ export const prerender = true;
           <div class="welcome-text">
             <h2>A Place to Call Home</h2>
             <p class="lead">
-              At Trinity Garden Assisted Living, we understand that choosing the right care for your loved one is one of life's most important decisions. Our mission is to provide a nurturing environment where seniors can maintain their independence while receiving the personalized support they need.
+              At Trinity Garden Assisted Living, we understand that choosing the
+              right care for your loved one is one of life's most important
+              decisions. Our mission is to provide a nurturing environment where
+              seniors can maintain their independence while receiving the
+              personalized support they need.
             </p>
             <p>
-              With our compassionate staff, beautiful surroundings, and commitment to excellence, we create more than just a facility—we create a vibrant community where every resident is treated like family.
+              With our compassionate staff, beautiful surroundings, and
+              commitment to excellence, we create more than just a facility—we
+              create a vibrant community where every resident is treated like
+              family.
             </p>
             <a href="/about" class="btn btn-primary">Discover Our Story</a>
           </div>
           <div class="welcome-image">
-            <img
-              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80"
+            <Image
+              src={livingRoom}
               alt="Happy senior residents at Trinity Garden"
               loading="lazy"
+              width={800}
+              height={600}
+              quality={80}
             />
           </div>
         </div>
@@ -115,7 +140,8 @@ export const prerender = true;
         <div class="section-header text-center">
           <h2>Comprehensive Care Services</h2>
           <p class="section-description">
-            Personalized care plans tailored to each resident's unique needs and preferences
+            Personalized care plans tailored to each resident's unique needs and
+            preferences
           </p>
         </div>
         <div class="grid grid-3">
@@ -127,12 +153,12 @@ export const prerender = true;
           <ServiceCard
             title="Memory Care"
             description="Specialized care for residents with Alzheimer's and dementia in a secure, engaging environment."
-            image="https://images.unsplash.com/photo-1581594549595-35f6edc7b762?w=600&q=80"
+            image={memoryCare.src}
           />
           <ServiceCard
             title="Personal Care"
             description="Individualized assistance with bathing, dressing, medication management, and daily living activities."
-            image="https://images.unsplash.com/photo-1576765607924-3f7b8410a787?w=600&q=80"
+            image={personalCare.src}
           />
           <ServiceCard
             title="Medication Management"
@@ -147,11 +173,13 @@ export const prerender = true;
           <ServiceCard
             title="Activities & Engagement"
             description="Daily social, recreational, and wellness activities designed to enrich mind, body, and spirit."
-            image="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600&q=80"
+            image={artsCrafts.src}
           />
         </div>
         <div class="section-cta text-center">
-          <a href="/services" class="btn btn-primary btn-large">View All Services</a>
+          <a href="/services" class="btn btn-primary btn-large"
+            >View All Services</a
+          >
         </div>
       </div>
     </section>
@@ -162,7 +190,8 @@ export const prerender = true;
         <div class="section-header text-center">
           <h2>Exceptional Amenities</h2>
           <p class="section-description">
-            Every detail thoughtfully designed for comfort, safety, and enjoyment
+            Every detail thoughtfully designed for comfort, safety, and
+            enjoyment
           </p>
         </div>
         <div class="amenities-grid">
@@ -248,11 +277,17 @@ export const prerender = true;
         <div class="cta-content">
           <h2>Schedule Your Personal Tour Today</h2>
           <p>
-            Experience the Trinity Garden difference firsthand. We'd love to show you around our beautiful community and answer any questions you may have.
+            Experience the Trinity Garden difference firsthand. We'd love to
+            show you around our beautiful community and answer any questions you
+            may have.
           </p>
           <div class="cta-buttons">
-            <a href="/contact" class="btn btn-green btn-large">Schedule a Tour</a>
-            <a href="tel:+1-813-467-9393" class="btn btn-light btn-large">Call (813) 467-9393</a>
+            <a href="/contact" class="btn btn-green btn-large"
+              >Schedule a Tour</a
+            >
+            <a href="tel:+1-813-467-9393" class="btn btn-light btn-large"
+              >Call (813) 467-9393</a
+            >
           </div>
         </div>
       </div>
@@ -322,10 +357,17 @@ export const prerender = true;
     margin-top: var(--spacing-2xl);
   }
 
+  /* Services Grid */
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
+
   /* Amenities Grid */
   .amenities-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
   }
 
@@ -362,7 +404,11 @@ export const prerender = true;
 
   /* CTA Section */
   .cta-section {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    background: linear-gradient(
+      135deg,
+      var(--color-primary) 0%,
+      var(--color-primary-dark) 100%
+    );
     color: var(--color-white);
     padding: var(--spacing-3xl) 0;
   }
