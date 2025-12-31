@@ -1,5 +1,8 @@
 ---
-const currentPath = Astro.url.pathname;
+// Normalize path by removing trailing slash (except for root)
+const currentPath = Astro.url.pathname === '/'
+  ? '/'
+  : Astro.url.pathname.replace(/\/$/, '');
 ---
 
 <header class="header">
