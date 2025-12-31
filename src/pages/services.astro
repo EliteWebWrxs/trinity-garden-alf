@@ -9,6 +9,8 @@ import personalCare from "../assets/personal-care.webp";
 import respiteCare from "../assets/respite-care.webp";
 import memoryCare from "../assets/memory-care.webp";
 import artsCrafts from "../assets/arts-crafts.webp";
+import assistedLiving from "../assets/assisted-living.webp";
+import healthCoordination from "../assets/healthcare-coordination.webp";
 
 export const prerender = true;
 ---
@@ -118,7 +120,7 @@ export const prerender = true;
         <div class="service-content">
           <div class="service-image">
             <img
-              src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=800&q=80"
+              src={assistedLiving.src}
               alt="Assisted living care at Trinity Garden"
               loading="lazy"
             />
@@ -164,7 +166,8 @@ export const prerender = true;
           <div class="service-text">
             <h2>Adult Daycare</h2>
             <p class="lead">
-              Professional daytime care and supervision in a safe, engaging environment for adults who need assistance during the day.
+              Professional daytime care and supervision in a safe, engaging
+              environment for adults who need assistance during the day.
             </p>
             <ul class="service-features">
               <li>Safe, supervised environment</li>
@@ -356,7 +359,7 @@ export const prerender = true;
         <div class="service-content reverse">
           <div class="service-image">
             <img
-              src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80"
+              src={healthCoordination.src}
               alt="Healthcare coordination services"
               loading="lazy"
             />
