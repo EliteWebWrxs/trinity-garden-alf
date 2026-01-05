@@ -11,8 +11,11 @@ import livingRoom from "../assets/living-room.webp";
 import personalCare from "../assets/personal-care.webp";
 import respiteCare from "../assets/respite-care.webp";
 import memoryCare from "../assets/memory-care.webp";
-import artsCrafts from "../assets/arts-crafts.webp";
-import assistedLiving from "../assets/assisted-living.webp";
+import artsCrafts from "../assets/weights.jpg";
+import assistedLiving from "../assets/Before-Becoming-Caregiver-image1.jpg";
+import outsideHome from "../assets/Gallery-hero.webp";
+import medication from "../assets/medication.jpg";
+import dining from "../assets/dining.jpg";
 
 export const prerender = true;
 ---
@@ -87,8 +90,8 @@ export const prerender = true;
   <Header />
 
   <Hero
-    subtitle="Welcome to Trinity Garden"
-    title="Where Comfort Meets Compassionate Care"
+    subtitle="Welcome to Trinity Garden assisted living facility"
+    title="Comfort, Compassion and Community"
     description="A warm, home-like environment where seniors thrive with personalized attention, dignity, and respect."
     primaryCTA={{
       text: "Schedule a Tour",
@@ -122,7 +125,7 @@ export const prerender = true;
           </div>
           <div class="welcome-image">
             <Image
-              src={livingRoom}
+              src={outsideHome}
               alt="Happy senior residents at Trinity Garden"
               loading="lazy"
               width={800}
@@ -162,15 +165,15 @@ export const prerender = true;
           <ServiceCard
             title="Medication Management"
             description="Professional oversight ensuring medications are taken correctly and on schedule for optimal health."
-            image="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80"
+            image={medication.src}
           />
           <ServiceCard
             title="Nutritious Dining"
             description="Chef-prepared, nutritious meals served in our elegant dining room, accommodating dietary needs."
-            image="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80"
+            image={dining.src}
           />
           <ServiceCard
-            title="Activities & Engagement"
+            title="Wellness & Activities"
             description="Daily social, recreational, and wellness activities designed to enrich mind, body, and spirit."
             image={artsCrafts.src}
           />
@@ -183,7 +186,7 @@ export const prerender = true;
       </div>
     </section>
 
-    <section class="amenities-section">
+    <!-- <section class="amenities-section">
       <div class="container">
         <div class="section-header text-center">
           <h2>Exceptional Amenities</h2>
@@ -235,7 +238,7 @@ export const prerender = true;
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="testimonials-section section-alt">
       <div class="container">

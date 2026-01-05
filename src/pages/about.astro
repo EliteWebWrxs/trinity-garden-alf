@@ -55,38 +55,70 @@ export const prerender = true;
   />
 
   <main>
+    <section class="story-section">
+      <div class="container-narrow">
+        <div class="section-header text-center">
+          <h2>The Trinity Garden Story</h2>
+        </div>
+        <div class="story-content">
+          <p class="lead">
+            Trinity Garden Assisted Living was founded on a simple but profound
+            belief: that every senior deserves to age with dignity, surrounded
+            by compassion and genuine care.
+          </p>
+          <p>
+            Our journey began when our founders recognized a need for assisted
+            living that truly felt like home—a place where residents are valued
+            as individuals, not just patients. They envisioned a community where
+            seniors could maintain their independence while receiving
+            personalized support in a warm, welcoming environment.
+          </p>
+          <p>
+            Today, Trinity Garden stands as a testament to that vision. Our
+            beautiful facility, combined with our dedicated team of caring
+            professionals, creates an atmosphere where residents don't just
+            live—they flourish. From our chef-prepared meals to our engaging
+            activity programs, every detail is thoughtfully designed to enhance
+            quality of life.
+          </p>
+          <p>
+            We're proud to have become a trusted partner for families seeking
+            the best care for their loved ones. Our commitment to excellence,
+            innovation in senior care, and unwavering dedication to our
+            residents' wellbeing continues to guide us every day.
+          </p>
+        </div>
+      </div>
+    </section>
     <section class="mission-section">
       <div class="container">
         <div class="mission-content">
           <div class="mission-text">
             <h2>Our Mission</h2>
             <p class="lead">
-              At Trinity Garden Assisted Living, our mission is to provide
-              exceptional care that honors the dignity, independence, and
-              individuality of every resident.
+              At Trinity Garden Assisted Living Facility, our mission is to
+              create a nurturing home where every resident is honored,
+              supported, and genuinely cared for.
             </p>
             <p>
-              We believe that every senior deserves to live their golden years
-              with grace, comfort, and joy. Our dedicated team works tirelessly
-              to create an environment where residents don't just receive
-              care—they thrive in a vibrant community that feels like home.
+              We are committed to providing compassionate, personalized care
+              that respects each resident’s life story, preserves dignity, and
+              promotes independence, comfort, and peace of mind.
             </p>
             <p>
-              Through personalized care plans, engaging activities, and a warm
-              atmosphere, we empower our residents to maintain their
-              independence while providing the support they need to live life to
-              the fullest.
+              Through meaningful relationships, attentive service, and a safe,
+              loving environment, we strive to enrich each day with purpose,
+              connection, and a true sense of belonging—so every resident not
+              only lives here, but truly feels at home.
             </p>
-          </div>
-          <div class="mission-image">
-            <Image
-              src={billOfRights}
-              alt="Trinity Garden care team with resident"
-              loading="lazy"
-              width={800}
-              height={600}
-              quality={80}
-            />
+
+            <h2>Our Vision</h2>
+            <p>
+              To be a trusted home where comfort, compassion, and community
+              shape every experience—helping each resident thrive with dignity,
+              purpose, and peace of mind, while families feel confident and
+              supported.
+            </p>
           </div>
         </div>
       </div>
@@ -149,42 +181,6 @@ export const prerender = true;
               brings opportunities for happiness and fulfillment.
             </p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="story-section">
-      <div class="container-narrow">
-        <div class="section-header text-center">
-          <h2>The Trinity Garden Story</h2>
-        </div>
-        <div class="story-content">
-          <p class="lead">
-            Trinity Garden Assisted Living was founded on a simple but profound
-            belief: that every senior deserves to age with dignity, surrounded
-            by compassion and genuine care.
-          </p>
-          <p>
-            Our journey began when our founders recognized a need for assisted
-            living that truly felt like home—a place where residents are valued
-            as individuals, not just patients. They envisioned a community where
-            seniors could maintain their independence while receiving
-            personalized support in a warm, welcoming environment.
-          </p>
-          <p>
-            Today, Trinity Garden stands as a testament to that vision. Our
-            beautiful facility, combined with our dedicated team of caring
-            professionals, creates an atmosphere where residents don't just
-            live—they flourish. From our chef-prepared meals to our engaging
-            activity programs, every detail is thoughtfully designed to enhance
-            quality of life.
-          </p>
-          <p>
-            We're proud to have become a trusted partner for families seeking
-            the best care for their loved ones. Our commitment to excellence,
-            innovation in senior care, and unwavering dedication to our
-            residents' wellbeing continues to guide us every day.
-          </p>
         </div>
       </div>
     </section>
@@ -280,7 +276,7 @@ export const prerender = true;
 
   .mission-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: var(--spacing-2xl);
     align-items: center;
   }
@@ -289,6 +285,7 @@ export const prerender = true;
     font-size: var(--font-size-2xl);
     color: var(--color-primary);
     margin-bottom: var(--spacing-lg);
+    text-align: center;
   }
 
   .lead {
