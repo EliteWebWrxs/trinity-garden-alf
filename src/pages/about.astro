@@ -6,6 +6,7 @@ import Footer from "../components/Footer.astro";
 import Hero from "../components/Hero.astro";
 import billOfRights from "../assets/bill-of-rights.webp";
 import aboutHero from "../assets/AboutHeroHeader.webp";
+import ourStory from "../assets/ourStory.jpeg";
 
 export const prerender = true;
 ---
@@ -56,37 +57,42 @@ export const prerender = true;
 
   <main>
     <section class="story-section">
-      <div class="container-narrow">
+      <div class="container">
         <div class="section-header text-center">
           <h2>The Trinity Garden Story</h2>
         </div>
-        <div class="story-content">
-          <p class="lead">
-            Trinity Garden Assisted Living was founded on a simple but profound
-            belief: that every senior deserves to age with dignity, surrounded
-            by compassion and genuine care.
-          </p>
-          <p>
-            Our journey began when our founders recognized a need for assisted
-            living that truly felt like home—a place where residents are valued
-            as individuals, not just patients. They envisioned a community where
-            seniors could maintain their independence while receiving
-            personalized support in a warm, welcoming environment.
-          </p>
-          <p>
-            Today, Trinity Garden stands as a testament to that vision. Our
-            beautiful facility, combined with our dedicated team of caring
-            professionals, creates an atmosphere where residents don't just
-            live—they flourish. From our chef-prepared meals to our engaging
-            activity programs, every detail is thoughtfully designed to enhance
-            quality of life.
-          </p>
-          <p>
-            We're proud to have become a trusted partner for families seeking
-            the best care for their loved ones. Our commitment to excellence,
-            innovation in senior care, and unwavering dedication to our
-            residents' wellbeing continues to guide us every day.
-          </p>
+        <div class="story-layout">
+          <div class="story-image">
+            <Image src={ourStory} alt="Trinity Garden Story" />
+          </div>
+          <div class="story-content">
+            <p class="lead">
+              Trinity Garden Assisted Living was built on a simple, powerful
+              belief: every senior deserves to age with dignity, respect, and
+              heartfelt compassion.
+            </p>
+            <p>
+              Our story began when our founder saw the need for a different kind
+              of assisted living—one that truly feels like home. A place where
+              residents are known personally, celebrated for who they are, and
+              supported with care that honors their independence while meeting
+              their changing needs.
+            </p>
+            <p>
+              Today, Trinity Garden reflects that vision in every way. With a
+              warm, welcoming environment and a dedicated team of professionals,
+              we create more than a place to live—we create a place to thrive.
+              From nourishing, home-cooked meals to engaging daily activities,
+              every detail is thoughtfully designed to bring comfort, connection,
+              and peace of mind.
+            </p>
+            <p>
+              Families trust Trinity Garden because we lead with excellence,
+              compassion, and consistency. And every day, we remain committed to
+              what matters most—helping our residents live with purpose, joy, and
+              the confidence of being truly cared for.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -129,57 +135,81 @@ export const prerender = true;
         <div class="section-header text-center">
           <h2>Our Core Values</h2>
           <p class="section-description">
-            The principles that guide everything we do
+            At Trinity Garden Assisted Living Facility, our promise is reflected
+            in the values we live by every day. These principles guide how we
+            care for our residents, support families, and lead with excellence.
           </p>
         </div>
-        <div class="values-grid">
-          <div class="value-card">
-            <div class="value-icon">💝</div>
-            <h3>Compassion</h3>
-            <p>
-              We treat every resident with kindness, empathy, and genuine care,
-              as we would our own family members.
-            </p>
+        <div class="values-list">
+          <div class="value-item">
+            <div class="value-letter">T</div>
+            <div class="value-content">
+              <h3>Trust & Compassion</h3>
+              <p>
+                We build lasting relationships through kindness, empathy, and
+                dependable care.
+              </p>
+            </div>
           </div>
-          <div class="value-card">
-            <div class="value-icon">🤝</div>
-            <h3>Respect</h3>
-            <p>
-              We honor each individual's dignity, preferences, and life
-              experiences, ensuring they maintain autonomy and choice.
-            </p>
+          <div class="value-item">
+            <div class="value-letter">R</div>
+            <div class="value-content">
+              <h3>Respect for All</h3>
+              <p>
+                We honor every resident's dignity, background, and personal
+                journey.
+              </p>
+            </div>
           </div>
-          <div class="value-card">
-            <div class="value-icon">⭐</div>
-            <h3>Excellence</h3>
-            <p>
-              We strive for the highest standards in care, maintaining
-              continuous training and improvement in all we do.
-            </p>
+          <div class="value-item">
+            <div class="value-letter">I</div>
+            <div class="value-content">
+              <h3>Individualized Care</h3>
+              <p>
+                We provide personalized support that meets each resident's
+                unique needs and preferences.
+              </p>
+            </div>
           </div>
-          <div class="value-card">
-            <div class="value-icon">🏠</div>
-            <h3>Community</h3>
-            <p>
-              We foster meaningful connections and relationships that combat
-              loneliness and create a true sense of belonging.
-            </p>
+          <div class="value-item">
+            <div class="value-letter">N</div>
+            <div class="value-content">
+              <h3>Nurturing Environment</h3>
+              <p>
+                We create a warm, peaceful home where residents feel safe,
+                supported, and valued.
+              </p>
+            </div>
           </div>
-          <div class="value-card">
-            <div class="value-icon">🛡️</div>
-            <h3>Safety</h3>
-            <p>
-              We provide a secure environment with 24/7 professional care,
-              giving families peace of mind.
-            </p>
+          <div class="value-item">
+            <div class="value-letter">I</div>
+            <div class="value-content">
+              <h3>Integrity Always</h3>
+              <p>
+                We lead with honesty, accountability, and ethical care in
+                everything we do.
+              </p>
+            </div>
           </div>
-          <div class="value-card">
-            <div class="value-icon">✨</div>
-            <h3>Joy</h3>
-            <p>
-              We celebrate life's moments, big and small, ensuring every day
-              brings opportunities for happiness and fulfillment.
-            </p>
+          <div class="value-item">
+            <div class="value-letter">T</div>
+            <div class="value-content">
+              <h3>Tailored Support</h3>
+              <p>
+                We adapt our care as needs change, ensuring comfort, safety, and
+                independence.
+              </p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-letter">Y</div>
+            <div class="value-content">
+              <h3>Your Well-Being First</h3>
+              <p>
+                Every decision we make is centered on the health, happiness, and
+                quality of life of our residents.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -222,20 +252,25 @@ export const prerender = true;
         </div>
         <div class="team-description">
           <p>
-            Our team includes experienced physicians, certified caregivers,
-            activity coordinators, culinary professionals, and administrative
-            staff—all dedicated to creating a supportive, enriching environment.
-            We carefully select each team member not only for their professional
-            qualifications but also for their genuine compassion and commitment
-            to senior care.
+            Our team is made up of experienced physicians, certified caregivers,
+            activity coordinators, kitchen-trained staff, and dedicated
+            administrative professionals—each committed to creating a safe,
+            supportive, and enriching environment. With dietitian-guided menus
+            and attentive daily care, we ensure every resident receives the
+            comfort, nourishment, and support they deserve.
           </p>
           <p>
-            Through continuous education and training, our staff stays current
-            with best practices in assisted living, adult daycare, and
-            person-centered care approaches. Most importantly, they build
-            meaningful relationships with residents, getting to know their
-            preferences, histories, and needs to provide truly personalized
-            care.
+            We carefully select each team member not only for their
+            qualifications, but for their genuine compassion and heart for
+            senior care. Through ongoing education and training, our staff stays
+            current with best practices in assisted living, adult day services,
+            and person-centered care.
+          </p>
+          <p>
+            Most importantly, we take the time to build meaningful relationships
+            with our residents—learning their routines, preferences, and life
+            stories—so we can provide care that feels personal, respectful, and
+            truly like home.
           </p>
         </div>
       </div>
@@ -308,38 +343,59 @@ export const prerender = true;
   }
 
   /* Values Section */
-  .values-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-xl);
+  .values-list {
+    max-width: 900px;
+    margin: 0 auto;
   }
 
-  .value-card {
-    text-align: center;
+  .value-item {
+    display: flex;
+    gap: var(--spacing-xl);
+    align-items: flex-start;
     padding: var(--spacing-xl);
     background-color: var(--color-white);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-lg);
     transition: all var(--transition-base);
   }
 
-  .value-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-xl);
+  .value-item:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(8px);
   }
 
-  .value-icon {
-    font-size: 3.5rem;
-    margin-bottom: var(--spacing-md);
+  .value-letter {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: var(--color-white);
+    background: linear-gradient(
+      135deg,
+      var(--color-primary) 0%,
+      var(--color-accent) 100%
+    );
+    border-radius: var(--radius-lg);
   }
 
-  .value-card h3 {
+  .value-content {
+    flex: 1;
+  }
+
+  .value-content h3 {
     font-size: var(--font-size-xl);
     color: var(--color-primary);
     margin-bottom: var(--spacing-sm);
+    margin-top: 0;
   }
 
-  .value-card p {
+  .value-content p {
     color: var(--color-text-secondary);
     line-height: 1.6;
     margin: 0;
@@ -350,9 +406,27 @@ export const prerender = true;
     padding: var(--spacing-3xl) 0;
   }
 
+  .story-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+  }
+
+  .story-image {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .story-content {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 100%;
   }
 
   .story-content p {
@@ -474,8 +548,26 @@ export const prerender = true;
       order: -1;
     }
 
-    .values-grid {
+    .story-layout {
       grid-template-columns: 1fr;
+      gap: var(--spacing-xl);
+    }
+
+    .story-image {
+      order: -1;
+    }
+
+    .value-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: var(--spacing-lg);
+    }
+
+    .value-letter {
+      width: 60px;
+      height: 60px;
+      font-size: 2.5rem;
     }
 
     .team-features {
