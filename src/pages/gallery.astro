@@ -48,11 +48,11 @@ const galleryImages = {
       alt: "Common area at Trinity Garden",
       caption: "Welcoming Common Areas",
     },
-    {
-      src: communitySpace2,
-      alt: "Residents enjoying activities",
-      caption: "Engaging Community Life",
-    },
+    // {
+    //   src: communitySpace2,
+    //   alt: "Residents enjoying activities",
+    //   caption: "Engaging Community Life",
+    // },
     {
       src: communitySpace3,
       alt: "Beautiful lobby area",
@@ -194,15 +194,17 @@ const galleryImages = {
         <div class="text-center">
           <h2>Welcome to Trinity Garden</h2>
           <p class="lead">
-            Pictures speak louder than words. Browse our gallery to see the
-            warm, inviting atmosphere that makes Trinity Garden feel like home.
-            From our elegant common areas to private suites and beautiful
-            outdoor spaces, every detail has been thoughtfully designed for
-            comfort and safety.
+            Pictures truly capture what words cannot. Explore our gallery to
+            experience the warm, welcoming environment that makes Trinity Garden
+            feel like home. From our beautifully appointed common areas to
+            private suites and peaceful outdoor spaces, every detail is
+            thoughtfully designed with comfort, safety, and quality of life in
+            mind.
           </p>
           <p class="cta-text">
-            We invite you to schedule a personal tour to experience our
-            community in person and meet our wonderful staff and residents.
+            We invite you to schedule a personal tour to experience Trinity
+            Garden in person and meet our dedicated team and welcoming
+            residents.
           </p>
         </div>
       </div>
@@ -430,6 +432,7 @@ const galleryImages = {
   }
 
   /* Center odd items in 2-column grid */
+  #community .gallery-grid-2 .gallery-item:nth-child(3):last-child,
   #room-details .gallery-grid-2 .gallery-item:nth-child(3):last-child {
     grid-column: 1 / -1;
     justify-self: center;
@@ -527,6 +530,7 @@ const galleryImages = {
     }
 
     /* Reset centered 3rd image on mobile */
+    #community .gallery-grid-2 .gallery-item:nth-child(3):last-child,
     #room-details .gallery-grid-2 .gallery-item:nth-child(3):last-child {
       grid-column: auto;
       justify-self: auto;
