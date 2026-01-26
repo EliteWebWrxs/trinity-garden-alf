@@ -4,13 +4,15 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Hero from "../components/Hero.astro";
-import serviceHero from "../assets/service-hero.webp";
-import personalCare from "../assets/personal-care.webp";
-import respiteCare from "../assets/respite-care.webp";
-import memoryCare from "../assets/safeAndComfort.jpeg";
+import serviceHero from "../assets/Boomer-Group.jpg";
+import personalCare from "../assets/personal.jpg";
+import respiteCare from "../assets/respite.jpeg";
+import memoryCare from "../assets/safe.jpg";
 import artsCrafts from "../assets/arts-crafts.webp";
-import assistedLiving from "../assets/assisted-living.webp";
+import assistedLiving from "../assets/assisted.jpeg";
 import healthCoordination from "../assets/General-medicine.jpg";
+import med from "../assets/med.png";
+import dinning from "../assets/dinning.jpg";
 
 export const prerender = true;
 ---
@@ -108,9 +110,10 @@ export const prerender = true;
         <div class="section-header text-center">
           <h2>Caring for Every Aspect of Senior Living</h2>
           <p class="section-description">
-            At Trinity Garden, we provide a full spectrum of services designed
-            to meet the unique needs of each resident while promoting
-            independence, dignity, and quality of life.
+            At Trinity Garden, we offer a full range of supportive services
+            tailored to each resident's individual needs—promoting independence,
+            preserving dignity, and enhancing quality of life in a safe,
+            nurturing home environment.
           </p>
         </div>
       </div>
@@ -129,21 +132,23 @@ export const prerender = true;
           <div class="service-text">
             <h2>Assisted Living</h2>
             <p class="lead">
-              Support when you need it, independence when you don't. Our
-              assisted living services strike the perfect balance between
-              personalized care and personal freedom.
+              Support when you need it, independence when you don’t. Our
+              assisted living services provide the right balance of personalized
+              care and personal freedom—so residents feel safe, respected, and
+              at home.
             </p>
             <ul class="service-features">
-              <li>24/7 professional staff support</li>
+              <li>24/7 supportive, trained staff</li>
               <li>
-                Assistance with daily activities (bathing, dressing, grooming)
+                Assistance with activities of daily living (bathing, dressing,
+                grooming)
               </li>
-              <li>Medication management and reminders</li>
+              <li>Medication administrations and coordination support</li>
               <li>Housekeeping and laundry services</li>
-              <li>Transportation to appointments and outings</li>
+              <li>Transportation arrangements for appointments and outings</li>
               <li>Personalized care plans reviewed regularly</li>
-              <li>Emergency call systems in every suite</li>
-              <li>Coordinated healthcare with physicians</li>
+              <li>Emergency response support for added safety</li>
+              <li>Coordinated care with physicians and healthcare providers</li>
             </ul>
           </div>
         </div>
@@ -164,21 +169,35 @@ export const prerender = true;
             />
           </div>
           <div class="service-text">
-            <h2>Safe and Comfort</h2>
+            <h2>Safe & Comfort</h2>
             <p class="lead">
-              Safe, comfortable environment with attentive support, fall
-              prevention, and daily home-style services that promote peace of
-              mind.
+              A safe, comfortable home setting with attentive support, fall
+              prevention, and daily home-style services—designed to promote
+              peace of mind for residents and families.
             </p>
             <ul class="service-features">
-              <li>Safe, supervised environment</li>
-              <li>Trained staff specializing in adult care</li>
-              <li>Social and recreational activities</li>
-              <li>Nutritious meals and snacks included</li>
-              <li>Medication management and monitoring</li>
-              <li>Transportation services available</li>
-              <li>Flexible scheduling options</li>
-              <li>Relief for family caregivers</li>
+              <li>
+                Safe, supervised environment with 24/7 supportive oversight
+              </li>
+              <li>
+                Fall prevention support and mobility-friendly spaces to reduce
+                risk
+              </li>
+              <li>
+                Trained, compassionate staff experienced in adult and senior
+                care
+              </li>
+              <li>
+                Relief for family caregivers through consistent, dependable
+                support
+              </li>
+              <li>
+                Ongoing family updates and open communication for peace of mind
+              </li>
+              <li>
+                Free Wi-Fi access to help residents stay connected with family
+                and friends
+              </li>
             </ul>
           </div>
         </div>
@@ -202,7 +221,7 @@ export const prerender = true;
             <h2>Personal Care</h2>
             <p class="lead">
               Compassionate, dignified assistance with activities of daily
-              living, tailored to each resident's individual needs and
+              living—personalized to each resident's unique needs, routines, and
               preferences.
             </p>
             <ul class="service-features">
@@ -211,9 +230,9 @@ export const prerender = true;
               <li>Mobility and transfer assistance</li>
               <li>Toileting and incontinence care</li>
               <li>Eating assistance when needed</li>
-              <li>Respectful, gentle care approach</li>
-              <li>Maintaining dignity and independence</li>
-              <li>Flexible care adapted to changing needs</li>
+              <li>Respectful, gentle approach to care</li>
+              <li>Support that promotes dignity and independence</li>
+              <li>Flexible care plans that adapt as needs change</li>
             </ul>
           </div>
         </div>
@@ -224,27 +243,38 @@ export const prerender = true;
       <div class="container">
         <div class="service-content reverse">
           <div class="service-image">
-            <img
-              src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80"
+            <Image
+              src={med}
               alt="Medication management"
               loading="lazy"
+              width={800}
+              height={600}
+              quality={80}
             />
           </div>
           <div class="service-text">
             <h2>Medication Management</h2>
             <p class="lead">
-              Professional oversight ensuring medications are taken correctly
-              and on schedule for optimal health outcomes and peace of mind.
+              Professional oversight to ensure medications are administered
+              safely, accurately, and on schedule—supporting better health
+              outcomes and peace of mind for residents and families.
             </p>
             <ul class="service-features">
-              <li>Registered nurse oversight</li>
-              <li>Medication administration and monitoring</li>
-              <li>Prescription refill coordination</li>
-              <li>Drug interaction monitoring</li>
-              <li>Communication with physicians and pharmacies</li>
-              <li>Detailed medication tracking and records</li>
-              <li>Education for residents and families</li>
-              <li>Over-the-counter medication guidance</li>
+              <li>Registered nurse oversight and support</li>
+              <li>Medication administration and routine monitoring</li>
+              <li>
+                Prescription refill coordination and pharmacy communication
+              </li>
+              <li>
+                Medication review for potential interactions and side effects
+              </li>
+              <li>Coordination with physicians for updates and changes</li>
+              <li>Detailed medication documentation and tracking</li>
+              <li>Education and updates for residents and families</li>
+              <li>
+                Guidance on approved over-the-counter medications (as
+                appropriate)
+              </li>
             </ul>
           </div>
         </div>
@@ -255,28 +285,43 @@ export const prerender = true;
       <div class="container">
         <div class="service-content">
           <div class="service-image">
-            <img
-              src="https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80"
+            <Image
+              src={dinning}
               alt="Dining services at Trinity Garden"
               loading="lazy"
+              width={800}
+              height={600}
+              quality={80}
             />
           </div>
           <div class="service-text">
             <h2>Nutritious Dining</h2>
             <p class="lead">
-              Chef-prepared, restaurant-quality meals served in our elegant
-              dining room, with attention to nutrition, taste, and dietary
-              needs.
+              Dietitian-created menus and trained kitchen staff provide
+              home-style meals in a comfortable dining setting—crafted with
+              attention to nutrition, taste, and each resident's individual
+              dietary needs.
             </p>
             <ul class="service-features">
-              <li>Three meals daily plus snacks</li>
-              <li>Fresh, locally-sourced ingredients</li>
-              <li>Accommodations for dietary restrictions</li>
-              <li>Heart-healthy and diabetic-friendly options</li>
-              <li>Texture-modified meals when needed</li>
-              <li>Beautiful dining room atmosphere</li>
-              <li>Flexible dining times</li>
-              <li>Special occasion meals and celebrations</li>
+              <li>
+                Three balanced meals daily, plus snacks and hydration support
+              </li>
+              <li>
+                Accommodations for dietary restrictions and physician-ordered
+                diets
+              </li>
+              <li>Heart-healthy and diabetic-friendly options available</li>
+              <li>
+                Texture-modified meals as needed (mechanical soft, puréed, etc.)
+              </li>
+              <li>
+                Welcoming dining room atmosphere that encourages social
+                connection
+              </li>
+              <li>
+                Flexible dining support based on resident routines and care
+                needs
+              </li>
             </ul>
           </div>
         </div>
@@ -296,19 +341,19 @@ export const prerender = true;
           <div class="service-text">
             <h2>Wellness & Activities</h2>
             <p class="lead">
-              A rich calendar of social, recreational, and wellness activities
-              designed to enrich mind, body, and spirit while fostering
-              community connections.
+              A vibrant calendar of social, recreational, and wellness
+              opportunities designed to support the mind, body, and spirit—while
+              building meaningful connections and a true sense of community.
             </p>
             <ul class="service-features">
-              <li>Exercise and fitness programs</li>
-              <li>Daily planned activities and events</li>
+              <li>Gentle exercise, movement, and wellness programs</li>
+              <li>Daily planned activities and special events</li>
               <li>Arts, crafts, and creative expression</li>
-              <li>Music therapy and entertainment</li>
-              <li>Educational programs and lectures</li>
-              <li>Games, puzzles, and brain fitness</li>
-              <li>Gardening and nature activities</li>
-              <li>Community outings and field trips</li>
+              <li>Music, entertainment, and therapeutic engagement</li>
+              <li>Educational programs, discussions, and enrichment topics</li>
+              <li>Games, puzzles, and cognitive stimulation activities</li>
+              <li>Outdoor time and nature-based activities (as appropriate)</li>
+              <li>Community outings and supervised field trips</li>
             </ul>
           </div>
         </div>
@@ -331,18 +376,26 @@ export const prerender = true;
           <div class="service-text">
             <h2>Respite Care</h2>
             <p class="lead">
-              Short-term stays providing family caregivers with a well-deserved
-              break while ensuring their loved ones receive excellent care.
+              Short-term stays that give family caregivers a well-deserved
+              break—while ensuring their loved one receives attentive,
+              high-quality care in a safe and comfortable home environment.
             </p>
             <ul class="service-features">
-              <li>Flexible stays from days to weeks</li>
-              <li>All assisted living services included</li>
-              <li>Trial experience for potential residents</li>
-              <li>Relief for family caregivers</li>
-              <li>Post-hospital recovery support</li>
-              <li>Seasonal or vacation care</li>
-              <li>Seamless transition process</li>
-              <li>Same high standards of care</li>
+              <li>Flexible stays available (days to weeks)</li>
+              <li>Access to all assisted living services during the stay</li>
+              <li>Ideal for caregiver relief and peace of mind</li>
+              <li>
+                Trial stay option for families considering long-term placement
+              </li>
+              <li>
+                Support for post-hospital recovery and short-term supervision
+                needs
+              </li>
+              <li>Seasonal, vacation, or temporary care solutions</li>
+              <li>Smooth, seamless transition and move-in support</li>
+              <li>
+                The same high standards of care provided to every resident
+              </li>
             </ul>
           </div>
         </div>
@@ -362,18 +415,37 @@ export const prerender = true;
           <div class="service-text">
             <h2>Healthcare Coordination</h2>
             <p class="lead">
-              Comprehensive coordination of medical care, working closely with
-              healthcare providers to ensure residents' health and wellness.
+              Comprehensive coordination of medical care—working closely with
+              healthcare providers to support each resident's health, comfort,
+              and overall well-being.
             </p>
             <ul class="service-features">
-              <li>On-site health assessments</li>
-              <li>Coordination with physicians and specialists</li>
-              <li>Transportation to medical appointments</li>
-              <li>Physical therapy arrangements</li>
-              <li>Hospice care coordination when needed</li>
-              <li>Health monitoring and vitals checks</li>
-              <li>Wound care and treatment management</li>
-              <li>Family health updates and communication</li>
+              <li>On-site health assessments and routine wellness checks</li>
+              <li>
+                Access to facility medical providers, minimizing the need to
+                leave the home
+              </li>
+              <li>
+                Assistance with transportation arrangements for appointments
+                when needed
+              </li>
+              <li>
+                Physical therapy and rehabilitation coordination (as
+                appropriate)
+              </li>
+              <li>
+                Hospice care coordination and supportive services when indicated
+              </li>
+              <li>
+                Ongoing health monitoring, vitals checks, and daily observation
+              </li>
+              <li>
+                Wound care support and treatment plan follow-through as ordered
+              </li>
+              <li>
+                Regular family communication and health updates for peace of
+                mind
+              </li>
             </ul>
           </div>
         </div>
