@@ -10,14 +10,17 @@ import heroHeader from "../assets/HeroHeader.webp";
 import livingRoom from "../assets/living-room.webp";
 import personalCare from "../assets/personal-care.webp";
 import respiteCare from "../assets/respite-care.webp";
-import memoryCare from "../assets/memory-care.webp";
-import artsCrafts from "../assets/arts-crafts.webp";
-import assistedLiving from "../assets/assisted-living.webp";
+import memoryCare from "../assets/safeAndComfort.jpeg";
+import artsCrafts from "../assets/weights.jpg";
+import assistedLiving from "../assets/Before-Becoming-Caregiver-image1.jpg";
+import outsideHome from "../assets/house.webp";
+import medication from "../assets/medication.jpg";
+import dining from "../assets/dining.jpg";
 
 export const prerender = true;
 ---
 
-<!-- <Layout
+<Layout
   title="Trinity Garden Assisted Living Riverview FL | Compassionate Senior Care"
   description="Trinity Garden Assisted Living in Riverview, FL provides exceptional, personalized care for seniors in a warm, home-like environment. 24/7 professional care, adult daycare, activities, and more. Call (813) 467-9393."
   keywords="assisted living Riverview FL, senior care Riverview, adult daycare Tampa, elderly care Florida, retirement community Riverview, nursing home alternative Tampa Bay, assisted living facility Riverview"
@@ -87,8 +90,8 @@ export const prerender = true;
   <Header />
 
   <Hero
-    subtitle="Welcome to Trinity Garden"
-    title="Where Comfort Meets Compassionate Care"
+    subtitle="Welcome to Trinity Garden assisted living facility"
+    title="Comfort, Compassion and Community"
     description="A warm, home-like environment where seniors thrive with personalized attention, dignity, and respect."
     primaryCTA={{
       text: "Schedule a Tour",
@@ -122,7 +125,7 @@ export const prerender = true;
           </div>
           <div class="welcome-image">
             <Image
-              src={livingRoom}
+              src={outsideHome}
               alt="Happy senior residents at Trinity Garden"
               loading="lazy"
               width={800}
@@ -150,8 +153,8 @@ export const prerender = true;
             image={assistedLiving.src}
           />
           <ServiceCard
-            title="Adult Daycare"
-            description="Professional daytime care and supervision in a safe, engaging environment for adults who need assistance."
+            title="Safe and Comfort"
+            description="Safe, comfortable environment with attentive support, fall prevention, and daily home-style services that promote peace of mind."
             image={memoryCare.src}
           />
           <ServiceCard
@@ -162,15 +165,15 @@ export const prerender = true;
           <ServiceCard
             title="Medication Management"
             description="Professional oversight ensuring medications are taken correctly and on schedule for optimal health."
-            image="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80"
+            image={medication.src}
           />
           <ServiceCard
             title="Nutritious Dining"
-            description="Chef-prepared, nutritious meals served in our elegant dining room, accommodating dietary needs."
-            image="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80"
+            description="Our trained kitchen staff prepares fresh, delicious meals every day, with personalized options to accommodate special diets and support each resident’s health needs."
+            image={dining.src}
           />
           <ServiceCard
-            title="Activities & Engagement"
+            title="Wellness & Activities"
             description="Daily social, recreational, and wellness activities designed to enrich mind, body, and spirit."
             image={artsCrafts.src}
           />
@@ -183,7 +186,7 @@ export const prerender = true;
       </div>
     </section>
 
-    <section class="amenities-section">
+    <!-- <section class="amenities-section">
       <div class="container">
         <div class="section-header text-center">
           <h2>Exceptional Amenities</h2>
@@ -235,7 +238,7 @@ export const prerender = true;
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="testimonials-section section-alt">
       <div class="container">
@@ -291,10 +294,10 @@ export const prerender = true;
   </main>
 
   <Footer />
-</Layout> -->
-<div>
+</Layout>
+<!-- <div>
   <h1>Coming soon</h1>
-</div>
+</div> -->
 <style>
   /* Welcome Section */
   .welcome-section {

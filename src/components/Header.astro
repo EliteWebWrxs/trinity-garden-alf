@@ -1,14 +1,17 @@
 ---
 // Normalize path by removing trailing slash (except for root)
-const currentPath = Astro.url.pathname === '/'
-  ? '/'
-  : Astro.url.pathname.replace(/\/$/, '');
+const currentPath =
+  Astro.url.pathname === "/" ? "/" : Astro.url.pathname.replace(/\/$/, "");
 ---
 
 <header class="header">
   <nav class="nav container">
     <a href="/" class="logo">
-      <img src="/logo.png" alt="Trinity Garden Assisted Living" class="logo-image" />
+      <img
+        src="/logo.png"
+        alt="Trinity Garden Assisted Living"
+        class="logo-image"
+      />
     </a>
 
     <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">
@@ -18,11 +21,73 @@ const currentPath = Astro.url.pathname === '/'
     </button>
 
     <ul class="nav-menu" id="navMenu">
-      <li><a href="/" class={currentPath === '/' ? 'nav-link active' : 'nav-link'}>Home</a></li>
-      <li><a href="/about" class={currentPath === '/about' ? 'nav-link active' : 'nav-link'}>About</a></li>
-      <li><a href="/services" class={currentPath === '/services' ? 'nav-link active' : 'nav-link'}>Services</a></li>
-      <li><a href="/gallery" class={currentPath === '/gallery' ? 'nav-link active' : 'nav-link'}>Gallery</a></li>
-      <li><a href="/contact" class={currentPath === '/contact' ? 'nav-link active' : 'nav-link'}>Contact</a></li>
+      <li>
+        <a href="/" class={currentPath === "/" ? "nav-link active" : "nav-link"}
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="/about"
+          class={currentPath === "/about" ? "nav-link active" : "nav-link"}
+          >About</a
+        >
+      </li>
+      <li>
+        <a
+          href="/services"
+          class={currentPath === "/services" ? "nav-link active" : "nav-link"}
+          >Services</a
+        >
+      </li>
+      <li>
+        <a
+          href="/gallery"
+          class={currentPath === "/gallery" ? "nav-link active" : "nav-link"}
+          >Gallery</a
+        >
+      </li>
+      <li class="nav-dropdown">
+        <button class="nav-link dropdown-toggle" aria-label="Resources menu">
+          Policy
+          <svg
+            width="12"
+            height="8"
+            viewBox="0 0 12 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="dropdown-arrow"
+          >
+            <path
+              d="M1 1L6 6L11 1"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="/visitation-policy.pdf" target="_blank"
+              >Visitation Policy</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://info.flclearinghouse.com/"
+              target="_blank"
+              rel="noopener noreferrer">Background Check</a
+            >
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a
+          href="/contact"
+          class={currentPath === "/contact" ? "nav-link active" : "nav-link"}
+          >Contact</a
+        >
+      </li>
       <li class="nav-cta">
         <a href="tel:+1-813-467-9393" class="btn btn-primary">Call Us</a>
       </li>
@@ -32,33 +97,62 @@ const currentPath = Astro.url.pathname === '/'
 
 <script>
   // Mobile menu toggle
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navMenu');
+  const navToggle = document.getElementById("navToggle");
+  const navMenu = document.getElementById("navMenu");
 
-  navToggle?.addEventListener('click', () => {
-    navMenu?.classList.toggle('active');
-    navToggle?.classList.toggle('active');
+  navToggle?.addEventListener("click", () => {
+    navMenu?.classList.toggle("active");
+    navToggle?.classList.toggle("active");
+  });
+
+  // Dropdown menu toggle
+  const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+  dropdownToggles.forEach((toggle) => {
+    toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      const parent = toggle.closest(".nav-dropdown");
+      parent?.classList.toggle("active");
+    });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement;
+    if (!target.closest(".nav-dropdown")) {
+      document.querySelectorAll(".nav-dropdown").forEach((dropdown) => {
+        dropdown.classList.remove("active");
+      });
+    }
   });
 
   // Close mobile menu when clicking a link
-  const navLinks = document.querySelectorAll('.nav-link');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu?.classList.remove('active');
-      navToggle?.classList.remove('active');
+  const navLinks = document.querySelectorAll(".nav-link");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu?.classList.remove("active");
+      navToggle?.classList.remove("active");
+    });
+  });
+
+  // Close mobile menu when clicking dropdown link
+  const dropdownLinks = document.querySelectorAll(".dropdown-menu a");
+  dropdownLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu?.classList.remove("active");
+      navToggle?.classList.remove("active");
     });
   });
 
   // Sticky header on scroll
-  const header = document.querySelector('.header');
+  const header = document.querySelector(".header");
 
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
 
     if (currentScroll > 100) {
-      header?.classList.add('scrolled');
+      header?.classList.add("scrolled");
     } else {
-      header?.classList.remove('scrolled');
+      header?.classList.remove("scrolled");
     }
   });
 </script>
@@ -84,7 +178,7 @@ const currentPath = Astro.url.pathname === '/'
     align-items: center;
     justify-content: space-between;
     padding: 1rem var(--container-padding);
-    min-height: 80px;
+    min-height: 200px;
   }
 
   .logo {
@@ -99,7 +193,7 @@ const currentPath = Astro.url.pathname === '/'
   }
 
   .logo-image {
-    height: 50px;
+    height: 150px;
     width: auto;
     display: block;
   }
@@ -156,7 +250,7 @@ const currentPath = Astro.url.pathname === '/'
   }
 
   .nav-link::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -176,6 +270,73 @@ const currentPath = Astro.url.pathname === '/'
     width: 100%;
   }
 
+  /* Dropdown Styles */
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropdown-arrow {
+    transition: transform var(--transition-base);
+  }
+
+  .nav-dropdown.active .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius-md);
+    padding: 0.5rem 0;
+    list-style: none;
+    margin: 0.5rem 0 0 0;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition-base);
+    z-index: 1000;
+  }
+
+  .nav-dropdown.active .dropdown-menu,
+  .nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown-menu li {
+    margin: 0;
+  }
+
+  .dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: all var(--transition-base);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: var(--color-cream);
+    color: var(--color-primary);
+    padding-left: 1.5rem;
+  }
+
   .nav-cta {
     margin-left: 1rem;
   }
@@ -186,6 +347,15 @@ const currentPath = Astro.url.pathname === '/'
 
   /* Mobile Styles */
   @media (max-width: 768px) {
+    .nav {
+      min-height: 100px;
+      padding: 0.75rem var(--container-padding);
+    }
+
+    .logo-image {
+      height: 75px;
+    }
+
     .nav-toggle {
       display: flex;
     }
@@ -204,13 +374,14 @@ const currentPath = Astro.url.pathname === '/'
       padding: 100px 2rem 2rem;
       box-shadow: var(--shadow-xl);
       transition: right var(--transition-base);
+      overflow-y: auto;
     }
 
     .nav-menu.active {
       right: 0;
     }
 
-    .nav-menu li {
+    .nav-menu > li {
       width: 100%;
       border-bottom: 1px solid var(--color-gray-light);
     }
@@ -219,6 +390,48 @@ const currentPath = Astro.url.pathname === '/'
       display: block;
       width: 100%;
       padding: 1rem 0;
+    }
+
+    /* Hide dropdown toggle on mobile */
+    .dropdown-toggle {
+      display: none;
+    }
+
+    /* Show dropdown items directly */
+    .dropdown-menu {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      padding: 0;
+      margin: 0;
+      max-height: none;
+      overflow: visible;
+      background-color: transparent;
+      border-radius: 0;
+      display: block;
+    }
+
+    .dropdown-menu li {
+      border-bottom: 1px solid var(--color-gray-light);
+    }
+
+    .dropdown-menu a {
+      display: block;
+      width: 100%;
+      padding: 1rem 0;
+      font-size: var(--font-size-base);
+      font-weight: 600;
+      color: var(--color-text-primary);
+      text-decoration: none;
+      transition: color var(--transition-base);
+    }
+
+    .dropdown-menu a:hover {
+      color: var(--color-primary);
+      background-color: transparent;
+      padding-left: 0;
     }
 
     .nav-cta {
